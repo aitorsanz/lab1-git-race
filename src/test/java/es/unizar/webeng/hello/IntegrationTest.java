@@ -56,7 +56,7 @@ public class IntegrationTest {
 	   the server response is OK (200). It also checks if the response contains 
 	   the text "body", if that´s the case, shows a warming message. If the specified media 
 	   type in the headers is not "text/css", show a warming message.
-	 * 
+	
 	 */
 	@Test
 	public void testCss() throws Exception {
