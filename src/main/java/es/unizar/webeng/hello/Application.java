@@ -8,6 +8,9 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
 public class Application extends SpringBootServletInitializer {
 
+    /**
+     * Main method uses SpringApplication.run() to launch de application.
+     */
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }

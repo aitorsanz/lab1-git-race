@@ -22,8 +22,13 @@ public class HelloControllerUnitTest {
 	@Autowired //Annotation to auto wire bean on the field.
 	private HelloController controller;
 
-
-    @Test //This method can be run as a test case
+	/**
+	 * This test verifies that the String retuned by HelloController.welcome is equals to "wellcome", the map
+	 * contains a key named "message", and the value of that key equals to the value assigned to [message]
+	 *
+	 * @throws Exception
+     */
+    @Test
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();
     	String view = controller.welcome(map);
