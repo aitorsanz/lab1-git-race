@@ -27,6 +27,7 @@ public class IntegrationTest {
 	* it tests software modules (witch are alredy correct) as a group.
 	*/
 
+
 	@Value("${local.server.port}")
 	private int port = 0;
 	
