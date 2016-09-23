@@ -23,6 +23,16 @@ public class IntegrationTest {
 	@Value("${local.server.port}")
 	private int port = 0;
 	
+	/**
+	 * The objective of this test is to check the connection 
+	 * to the Home page. This method will throw an exception 
+	 * if the connection fails or if the body of the page 
+	 * is not correct.
+	 * 
+	 * @throws Exception
+	 * 				if the connection failed or if the body of the 
+	 * 					page is not correct
+	 */
 	@Test
 	public void testHome() throws Exception {
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
