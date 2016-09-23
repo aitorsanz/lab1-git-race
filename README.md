@@ -10,3 +10,4 @@ Ruben Moreno | 680882 | [![Build Status](https://travis-ci.org/nebur395/lab1-git
 your name | your nia | your Travis-ci status
 Asier Salueña Sediles | 610344 | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race)
 Javier Murillo Magdalena | 650448 | [![Build Status](https://travis-ci.org/javmurillo/lab1-git-race.svg)](https://travis-ci.org/javmurillo/lab1-git-race)
+Ana Roig Jiménez | 686329 | [![Build Status](https://travis-ci.org/anicacortes/lab1-git-race.svg)](https://travis-ci.org/anicacortes/lab1-git-race)

@@ -18,3 +18,14 @@ BIBLIOGRAPHY: https://es.wikipedia.org/wiki/Spring_Framework#M.C3.B3dulos - http
 JUNIT TEST FRAMEWORK:
 	JUnit is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. JUnit Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. JUnit test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: setUp() method, which runs before every test invocation, tearDown() method, which runs after very test method.
 BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
+
+
+Guidelines about how to deploy the server on a platform like heroku will be given
+Heroku offers a service PaaS (Platform as a Service) where you can now deploy applications developed in Ruby, Node.js, Python, Clojure, Scala and Java, which in this case is the language chosen. In Heroku define an application and the source code of the application along with its dependencies.
+Heroku deployment is done through Git. The first time can be somewhat more complex the procedure, but once everything is set up, the other updates are simply making a push to the Heroku repository git push heroku master. With this code will be updated in the repository Heroku application and automatically restarts with the new version. Heroku also automatically detects which type of application are rising.
+The requirements are:
+-an existing Java app That Gradle use as a build tool.
+-a free Heroku account
+-Heroku the CLI
+If you are using gradlew, then you must also add your gradle/wrapper/gradle-wrapper.jar and gradle/wrapper/gradle-wrapper.properties to your Git repository.
+
