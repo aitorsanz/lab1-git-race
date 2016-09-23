@@ -14,6 +14,7 @@ public class HelloController {
 
 	@Value("${app.message:Hello World}")
 	private String message;
+	
 	@Value("${app.count}")
 	private int count; //counter used to track the number of visits made to the url "/"
 
@@ -35,7 +36,9 @@ public class HelloController {
 	 */
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
+		//Puts in the key "time" a new date.
 		model.put("time", new Date());
+		//Puts in the key "message", the value assigned to [message]
 		model.put("message", message);
 
 		//A simple counter that will show the amount of times that the client has visited the url "/"
