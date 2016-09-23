@@ -21,6 +21,6 @@ BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
 
 The next instructions will help you to build and run the application:
 
-The first step is to download the project or clone with git (git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race). Now, you can see the code and this information. This code is build with gradle. Gradle is an build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: "gradle build" on your terminal. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed. 
+The first step is to download the project or clone with git (git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: "gradle build" on your terminal. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed. 
 
 Finally, you can run the project with "gradle bootRun". Now you can verify if the application is running with your browser: go to localhost:8080 and you can see it. 
