@@ -9,3 +9,4 @@ Francisco Menendez Moya | 540891 | [![Build Status](https://travis-ci.org/M3tax/
 Ruben Moreno | 680882 | [![Build Status](https://travis-ci.org/nebur395/lab1-git-race.svg)](https://travis-ci.org/neur395/lab1-git-race)
 your name | your nia | your Travis-ci status
 Asier Salueña Sediles | 610344 | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race)
+Javier Murillo Magdalena | 650448 | [![Build Status](https://travis-ci.org/javmurillo/lab1-git-race.svg)](https://travis-ci.org/javmurillo/lab1-git-race)
