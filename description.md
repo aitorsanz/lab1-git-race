@@ -1,12 +1,9 @@
-Complete me!
 In this classes, faculty provides us some classes which try to show us a little demonstration of Spring controllers and some Junit Test for individual method petitions.
-====================================
-SPRING FRAMEWORK:
+##SPRING FRAMEWORK:
 	Spring is a framework for app developing, it's open source for Java platform.
 	Spring framework its made of some modules which provides a range of services, these modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, Messaging, and Test.
-	(See this diagram for more information: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/images/spring-overview.png).
-BIBLIOGRAPHY: https://es.wikipedia.org/wiki/Spring_Framework#M.C3.B3dulos - http://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html
-====================================
-JUNIT TEST FRAMEWORK:
+	[See this diagram for more information](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/images/spring-overview.png).
+###BIBLIOGRAPHY: [1](https://es.wikipedia.org/wiki/Spring_Framework#M.C3.B3dulos) [2](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html)
+##JUNIT TEST FRAMEWORK:
 	JUnit is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. JUnit Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. JUnit test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: setUp() method, which runs before every test invocation, tearDown() method, which runs after very test method.
-BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
+###BIBLIOGRAPHY: [click here](https://www.tutorialspoint.com/junit/junit_test_framework.html)
