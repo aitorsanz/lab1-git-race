@@ -19,10 +19,10 @@ JUNIT TEST FRAMEWORK:
 	JUnit is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. JUnit Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. JUnit test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: setUp() method, which runs before every test invocation, tearDown() method, which runs after very test method.
 BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
 
-**TRAVIS CI:**
-	Travis CI is distribuited continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. It main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60
-	Travis CI could be activated for different repositories. Moreover, it is configured by travis.yml file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects.
-	Travis CI supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
+##TRAVIS CI:
+Travis CI is distribuited continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. It main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60
+Travis CI could be activated for different repositories. Moreover, it is configured by travis.yml file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects.
+Travis CI supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 [BIBLIOGRAPHY](https://en.wikipedia.org/wiki/Travis_CI)
 
 INSTALLING GRADLE:
