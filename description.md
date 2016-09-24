@@ -32,25 +32,22 @@ In this classes, faculty provides us some classes which try to show us a little 
 **BIBLIOGRAPHY:** 
 - https://en.wikipedia.org/wiki/Travis_CI	
 
-INSTALLING GRADLE:
-	- Windows 7: Gradle requires a JDK to be installed, version 7 or higher. Visit this link to download and more information
-		(http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk).
-		You can now download Gradle binary only	distribution (https://gradle.org/gradle-download/) and unpack it into a folder on your system.
-		Now, right click on "My Computer" and then select "Properties"->"Advance system settings". Next, click on "Environment Variables"
-		button, found in "Advanced" tab. Then we want to add 2 new user variable, GRADLE_HOME and PATH. To add a new variable, click on "New..."
-		button (from user variables frame).	For GRADLE_HOME variable enter "GRADLE_HOME" into	the input field for "Variable name", and the location
-		of the dowloaded gradle into "Variable value". For PATH variable, enter "PATH" and "%GRADLE_HOME%\bin". If PATH existed before we created,
-		then we have to edit it. For that, click on "Edit...", and add ";%GRADLE_HOME%\bin" at the end.
-		Now you can use the gradle command in any command prompt. Type "gradle -v" to see if works. For build a project, go to the project's
-		root folder and type "gradle build". This only works if a "build.gradle" file is well created. Here is the User Guide
-		https://docs.gradle.org/current/userguide/userguide_single.html.
+#INSTALLING GRADLE ON WINDOWS 7
+1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
+2. You can now download Gradle binary only distribution [here](https://gradle.org/gradle-download/) and unpack it into a folder on your system.
+3. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
+4. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
+    * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
+5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if works.
+6. For build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
+
+Here is the [User Guide](https://docs.gradle.org/current/userguide/userguide_single.html).
 		
-		Common errors: 
-		- Gradle doesn't find a resource:
-			If this happens, building a project will result in a failure. The most common cause is that Windows system looks an
-			incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like "GRADLE_HOME" one).
-			Name it "JAVA_HOME", and refers to JDK installation folder ("C:\Program Files\Java\jdk1.8..." is a possible route). Ultimately,
-			edit the variable "PATH" adding ";%JAVA_HOME%\bin" at the end.
+**Common errors:**
+- Gradle doesn't find a resource:
+    - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
+    - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
+    - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
 
 HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
