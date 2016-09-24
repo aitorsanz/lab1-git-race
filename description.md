@@ -23,7 +23,7 @@ BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
 	Travis CI is distribuited continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. It main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60
 	Travis CI could be activated for different repositories. Moreover, it is configured by travis.yml file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects.
 	Travis CI supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
-[BIBLIOGRAPHY!](https://en.wikipedia.org/wiki/Travis_CI)
+[BIBLIOGRAPHY](https://en.wikipedia.org/wiki/Travis_CI)
 
 INSTALLING GRADLE:
 	- Windows 7: Gradle requires a JDK to be installed, version 7 or higher. Visit this link to download and more information
