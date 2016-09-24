@@ -44,3 +44,19 @@ INSTALLING GRADLE:
 			incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like "GRADLE_HOME" one).
 			Name it "JAVA_HOME", and refers to JDK installation folder ("C:\Program Files\Java\jdk1.8..." is a possible route). Ultimately,
 			edit the variable "PATH" adding ";%JAVA_HOME%\bin" at the end.
+
+HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
+
+	It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configure Gradle you can try if compile using the command "gradle check" in the terminal. Once this is well, you can start the application using the command "gradle bootrun". If everything goes fine, the application has been compiled and have started Spring Framework and the application. Now, you can access from your favourite browser by typing in the address bar: "localhost:8080".
+
+SOME OTHER TASKS OF GRADLE 
+
+	In addition to the commands said before, there are other interesting commands:
+
+		- help: Displays a help message.
+		- war: Generates a war archive with all the compiled classes, the web-app content and the libraries.
+		- test: Runs the unit tests.
+		- clean: Deletes the build directory.
+		- jar: Assembles a jar archive containing the main classes.
+
+	You can found more tasks if you type the command "gradle tasks" in your terminal.
