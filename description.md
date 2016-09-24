@@ -18,3 +18,19 @@ BIBLIOGRAPHY: https://es.wikipedia.org/wiki/Spring_Framework#M.C3.B3dulos - http
 JUNIT TEST FRAMEWORK:
 	JUnit is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. JUnit Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. JUnit test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: setUp() method, which runs before every test invocation, tearDown() method, which runs after very test method.
 BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
+
+HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
+
+	It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configure Gradle you can try if compile using the command "gradle check" in the terminal. Once this is well, you can start the application using the command "gradle bootrun". If everything goes fine, the application has been compiled and have started Spring Framework and the application. Now, you can access from your favourite browser by typing in the address bar: "localhost:8080".
+
+SOME OTHER TASKS OF GRADLE 
+
+	In addition to the commands said before, there are other interesting commands:
+
+		- help: Displays a help message.
+		- war: Generates a war archive with all the compiled classes, the web-app content and the libraries.
+		- test: Runs the unit tests.
+		- clean: Deletes the build directory.
+		- jar: Assembles a jar archive containing the main classes.
+
+	You can found more tasks if you type the command "gradle tasks" in your terminal.
