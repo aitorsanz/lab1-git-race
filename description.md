@@ -8,7 +8,7 @@ Since it's not possible to include the changes in the wiki into a pull request, 
 4. Make your locally changes and then push them to your github account: `git push editWiki master`
 5. Submit a issue to the official page (https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) requesting to the owner of the repo to review your changes and merge them in. Don't forget to include a link to your own repo and describe what you've changed.
 
-# DESCRIPTION ABOUT TECHNOLOGY USED
+# DESCRIPTION ABOUT TECHNOLOGY USED.
 
 In this classes, faculty provides us some classes which try to show us a little demonstration of Spring controllers and some Junit Test for individual method petitions.
 
