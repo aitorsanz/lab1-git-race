@@ -102,9 +102,9 @@ src/test/filters/ | Test resource filter files.
 src/it/ | Integration Tests (primarily for plugins).
 src/assembly/ | Assembly descriptors.
 src/site/ | Site.
-LICENSE.txt/ | Project's license.
-NOTICE.txt/ | Notices and attributions required by libraries that the project depends on.
-README.txt/ |Project's readme.
+LICENSE.txt | Project's license.
+NOTICE.txt | Notices and attributions required by libraries that the project depends on.
+README.txt | Project's readme.
 
 In our case, our project has the next structure:
 	
