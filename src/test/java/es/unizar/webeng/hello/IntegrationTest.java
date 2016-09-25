@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) 
 @SpringBootTest(webEnvironment= RANDOM_PORT)
 @DirtiesContext
 public class IntegrationTest {
@@ -23,6 +23,16 @@ public class IntegrationTest {
 	@Value("${local.server.port}")
 	private int port = 0;
 	
+	/**
+	 * The objective of this test is to check the connection 
+	 * to the Home page. This method will throw an exception 
+	 * if the connection fails or if the body of the page 
+	 * is not correct.
+	 * 
+	 * @throws Exception
+	 * 				if the connection failed or if the body of the 
+	 * 					page is not correct
+	 */
 	@Test
 	public void testHome() throws Exception {
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(

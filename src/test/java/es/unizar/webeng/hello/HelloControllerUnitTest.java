@@ -12,17 +12,22 @@ import java.util.HashMap;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(HelloController.class)
+@RunWith(SpringRunner.class) //JUnit will invoke the SpringRunner class to run the tests in that class instead of the runner built into JUnit.
+@WebMvcTest(HelloController.class)	//Using this annotation will disable full auto-configuration and instead apply only configuration relevant to MVC tests.
 public class HelloControllerUnitTest {
 
-	@Value("${app.message:Hello World}")
+	@Value("${app.message:Hello World}") //Annotation at the field that indicates a default value expression for the affected argument.
 	private String message;	
 
-	@Autowired
+	@Autowired //Annotation to auto wire bean on the field.
 	private HelloController controller;
 
-
+	/**
+	 * This test verifies that the String retuned by HelloController.welcome is equals to "wellcome", the map
+	 * contains a key named "message", and the value of that key equals to the value assigned to [message]
+	 *
+	 * @throws Exception
+     */
     @Test
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();
