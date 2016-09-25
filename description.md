@@ -118,4 +118,3 @@ As we can see our project follows Mavens directory layout. There are some direct
 - [Travis CI overview](https://en.wikipedia.org/wiki/Travis_CI)
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
->>>>>>> upstream/master
