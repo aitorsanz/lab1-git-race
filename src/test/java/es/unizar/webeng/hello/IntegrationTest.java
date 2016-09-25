@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) 
 @SpringBootTest(webEnvironment= RANDOM_PORT)
 @DirtiesContext
 public class IntegrationTest {
