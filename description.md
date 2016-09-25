@@ -124,5 +124,5 @@ You can find more tasks if you type the command `gradle tasks` in your terminal.
 	|gradle/
 	|other files
 
- 	As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project doesn't use anything to be included in those directories so they are not generated at building time.
+ 	As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 BIBLIOGRAPHY: [https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
