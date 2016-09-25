@@ -29,7 +29,7 @@ The requirements are:
 - a free Heroku account
 - Heroku the CLI
 If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.
-[BIBLIOGRAPHY] ()https://devcenter.heroku.com/articles/deploying-gradle-apps-on-heroku)
+[BIBLIOGRAPHY] (https://devcenter.heroku.com/articles/deploying-gradle-apps-on-heroku)
 
 ##TRAVIS CI:
 Travis CI is distribuited continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. It main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60
