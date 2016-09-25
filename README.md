@@ -9,6 +9,7 @@ Francisco Menendez Moya | 540891 | [![Build Status](https://travis-ci.org/M3tax/
 Ruben Moreno | 680882 | [![Build Status](https://travis-ci.org/nebur395/lab1-git-race.svg)](https://travis-ci.org/nebur395/lab1-git-race)
 Asier Salueña Sediles | 610344 | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race)
 Javier Murillo Magdalena | 650448 | [![Build Status](https://travis-ci.org/javmurillo/lab1-git-race.svg)](https://travis-ci.org/javmurillo/lab1-git-race)
+Ana Roig Jiménez | 686329 | [![Build Status](https://travis-ci.org/anicacortes/lab1-git-race.svg)](https://travis-ci.org/anicacortes/lab1-git-race)
 Cristina Lahoz Egea | 544393 | [![Build Status](https://travis-ci.org/cristinalahoz/lab1-git-race.svg)](https://travis-ci.org/cristinalahoz/lab1-git-race)
 Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race)
 Adrián Martínez Pérez | 576307 | [![Build Status](https://travis-ci.org/Electryk/lab1-git-race.svg)](https://travis-ci.org/Electryk/lab1-git-race)
