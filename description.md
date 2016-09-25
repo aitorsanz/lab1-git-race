@@ -26,6 +26,18 @@ In this classes, faculty provides us some classes which try to show us a little 
 **BIBLIOGRAPHY:** 
 - https://www.tutorialspoint.com/junit/junit_test_framework.html
 
+##Heroku
+Guidelines about how to deploy the server on a platform like heroku will be given
+Heroku offers a service PaaS (Platform as a Service) where you can now deploy applications developed in Ruby, Node.js, Python, Clojure, Scala and Java, which in this case is the language chosen. In Heroku define an application and the source code of the application along with its dependencies.
+Heroku deployment is done through Git. The first time, the procedure can be somewhat complex, but once everything is set up, the updates are simply making a push to the Heroku repository `<git push heroku master>`. With this code will be updated in the repository Heroku application and automatically restarts with the new version. Heroku also automatically detects which type of application it is rising.
+The requirements are:
+- an existing Java app that uses Gradle as a build tool.
+- a free Heroku account
+- Heroku the CLI
+If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.
+[BIBLIOGRAPHY](https://devcenter.heroku.com/articles/deploying-gradle-apps-on-heroku)
+
+
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 
