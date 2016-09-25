@@ -97,7 +97,6 @@ src/main/resources/ | Application/Library resources.
 src/main/webapp/ | Web application sources.
 src/test/java/ | Test sources.
 src/test/resources/ | Test resources.
-src/it/ | Integration Tests (primarily for plugins).
 src/assembly/ | Assembly descriptors.
 src/site/ | Site.
 LICENSE.txt | Project's license.
