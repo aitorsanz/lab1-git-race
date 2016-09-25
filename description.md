@@ -6,7 +6,7 @@ Since it's not possible to include the changes in the wiki into a pull request, 
 2. Clone the wiki repo that you want to update to your local machine somewhere: `git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race.wiki.git`
 3. Add a new remote to your local directory, for example: `git remote add editWiki https://github.com/YOUR-ACCOUNT-NAME/Edited-wiki`
 4. Make your locally changes and then push them to your github account: `git push editWiki master`
-5.  Submit a issue to the official page (https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) requesting to the owner of the repo to review your changes and merge them in. Don't forget to include a link to your own repo and describe what you've changed.
+5. Submit a issue to the official page (https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) requesting to the owner of the repo to review your changes and merge them in. Don't forget to include a link to your own repo and describe what you've changed.
 
 # DESCRIPTION ABOUT TECHNOLOGY USED
 
@@ -27,7 +27,7 @@ In this classes, faculty provides us some classes which try to show us a little 
 - https://www.tutorialspoint.com/junit/junit_test_framework.html
 
 #TRAVIS CI
-*Travis CI* is distribuited continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. It main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
+*Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 
 **BIBLIOGRAPHY:** 
 - https://en.wikipedia.org/wiki/Travis_CI	
@@ -51,7 +51,7 @@ Here is the [User Guide](https://docs.gradle.org/current/userguide/userguide_sin
 
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
-It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configure Gradle you can try if compile using the command `gradle check` in the terminal. Once this is well, you can start the application using the command `gradle bootrun`. If everything goes fine, the application has been compiled and have started Spring Framework and the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
+It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configuiring Gradle you can try to compile using the command `gradle check` in the terminal. Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
 ## SOME OTHER TASKS OF GRADLE 
 
@@ -62,4 +62,4 @@ In addition to the commands said before, there are other interesting commands:
 - **clean:** Deletes the build directory.
 - **jar:** Assembles a jar archive containing the main classes.
 
-You can found more tasks if you type the command `gradle tasks` in your terminal.
+You can find more tasks if you type the command `gradle tasks` in your terminal.
