@@ -77,34 +77,34 @@ In addition to the commands said before, there are other interesting commands:
 You can find more tasks if you type the command `gradle tasks` in your terminal.
 
 
-##USE OF MAVEN AS A JAVA PROJECT BUILDING TOOL
+#USE OF MAVEN AS A JAVA PROJECT BUILDING TOOL
 
-	Maven is a tool used for building and managing Java-based projects. The primary goal of Maven is to allow developers to comprehend the complete state of a development effort in the shortest period of time, Maven helps us:
-		- Making the build process easy.
-		- Providing a uniform build system.
-		- Providing quality project information.
-		- Providing guidelines for best practices development.
-		- Allowing trasnparent migration to new features.
+Maven is a tool used for building and managing Java-based projects. The primary goal of Maven is to allow developers to comprehend the complete state of a development effort in the shortest period of time, Maven helps us:
+- Making the build process easy.
+- Providing a uniform build system.
+- Providing quality project information.
+- Providing guidelines for best practices development.
+- Allowing trasnparent migration to new features.
 
-	MAVEN STANDARD DIRECTORY LAYOUT
+##MAVEN STANDARD DIRECTORY LAYOUT
 
-		Having a common directory layout help users familiar with one Maven project to not get lost in another different Maven project. The directory layout created by Maven have the directories exposed right below and you should try to confort your structure to this one as much as possible:
+Having a common directory layout help users familiar with one Maven project to not get lost in another different Maven project. The directory layout created by Maven have the directories exposed right below and you should try to confort your structure to this one as much as possible:
 
-		- src/main/java: Application/Library sources.
-		- src/main/resources: Application/Library resources. 
-		- src/main/filters:	Resource filter files.
-		- src/main/webapp: Web application sources.
-		- src/test/java: Test sources.
-		- src/test/resources: Test resources.
-		- src/test/filters:	Test resource filter files.
-		- src/it: Integration Tests (primarily for plugins).
-		- src/assembly:	Assembly descriptors.
-		- src/site:	Site.
-		- LICENSE.txt: Project's license.
-		- NOTICE.txt: Notices and attributions required by libraries that the project depends on.
-		- README.txt: Project's readme.
+- src/main/java: Application/Library sources.
+- src/main/resources: Application/Library resources. 
+- src/main/filters:	Resource filter files.
+- src/main/webapp: Web application sources.
+- src/test/java: Test sources.
+- src/test/resources: Test resources.
+- src/test/filters:	Test resource filter files.
+- src/it: Integration Tests (primarily for plugins).
+- src/assembly:	Assembly descriptors.
+- src/site:	Site.
+- LICENSE.txt: Project's license.
+- NOTICE.txt: Notices and attributions required by libraries that the project depends on.
+- README.txt: Project's readme.
 
-	In our case, our project has the next structure:
+In our case, our project has the next structure:
 	
 	|src/
 	|---main/
@@ -124,5 +124,5 @@ You can find more tasks if you type the command `gradle tasks` in your terminal.
 	|gradle/
 	|other files
 
- 	As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
+As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 BIBLIOGRAPHY: [https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
