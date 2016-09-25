@@ -1,3 +1,10 @@
 language: java
 jdk:
 - oraclejdk8
+addons:
+  sonarqube: true
+env:
+  global:
+  - secure: "r4TwJEEyCuRNro6TOIPI0IO5d/lthy0sAB+yTsLA3gILjSSv03p+dTh9p0rqYoNt9NaxMYE8CLXyT+KXtEvQozcD9ksvlyr8Blc41tW5PeEC8Ya+ZAIP2ZES5pyYN+thVRfuNv80n6S3VdC9ZOYxHZ2njp5/c733XBXAnoNKLLEgGh4Bkqrv4VxjPNYAeZuZfmFQPJl1hYwgOp1B6p2HEzW8uvU8cFsqgL4npKdH6SQYhU9LwnYUA+ibOqQIoInAL8TC7007JXN/Kgr03BakEoAmdatEeoNh5aCsBH2wUUQuKaXbK06RV+lx1efeHyFx7e/dcucsEblj2+TzWSORnXHCVbHu7jctkr1mTwiWanMTjGNexor12YA3sN42kLyzx6JpKL2e1zypcRIkfHrs9aVFAb9GehZ5wEgsWBnUIQ94zd9IqKqNdRjukc8BU8fAgI9KvMi52ykzZ2o5XGeQFzAyKiLJmotlq4EHt5w5zFXAFJHrrQadE4UhujIfmIiHA5/D8jAv9jr78/akv3HkeeLudy1bp7r2KdoUui+IZt+CzE0LJfvORB4eZDgMz4ao/2cdRluqH+w3dHqvt0WUfAwMgICG4yXPSg/8vr+gHxYZhKgonTbH2MbBsFtPt6iZCbJmlH3KfDHZ+WoRRobnZu/TYrEIuVASnBJlNXvwrhA="
+script:
+- ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN
