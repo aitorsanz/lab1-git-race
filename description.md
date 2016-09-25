@@ -104,7 +104,7 @@ You can find more tasks if you type the command `gradle tasks` in your terminal.
 		- NOTICE.txt: Notices and attributions required by libraries that the project depends on.
 		- README.txt: Project's readme.
 
-	In our case, our project have the next structure:
+	In our case, our project has the next structure:
 	
 	|src/
 	|---main/
