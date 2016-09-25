@@ -90,19 +90,21 @@ Maven is a tool used for building and managing Java-based projects. The primary 
 
 Having a common directory layout help users familiar with one Maven project to not get lost in another different Maven project. The directory layout created by Maven have the directories exposed right below and you should try to confort your structure to this one as much as possible:
 
-- src/main/java: Application/Library sources.
-- src/main/resources: Application/Library resources. 
-- src/main/filters:	Resource filter files.
-- src/main/webapp: Web application sources.
-- src/test/java: Test sources.
-- src/test/resources: Test resources.
-- src/test/filters:	Test resource filter files.
-- src/it: Integration Tests (primarily for plugins).
-- src/assembly:	Assembly descriptors.
-- src/site:	Site.
-- LICENSE.txt: Project's license.
-- NOTICE.txt: Notices and attributions required by libraries that the project depends on.
-- README.txt: Project's readme.
+Path | Description
+-----|------------
+src/main/java/ | Application/Library sources.
+src/main/resources/ | Application/Library resources. 
+src/main/filters/ | Resource filter files.
+src/main/webapp/ | Web application sources.
+src/test/java/ | Test sources.
+src/test/resources/ | Test resources.
+src/test/filters/ | Test resource filter files.
+src/it/ | Integration Tests (primarily for plugins).
+src/assembly/ | Assembly descriptors.
+src/site/ | Site.
+LICENSE.txt/ | Project's license.
+NOTICE.txt/ | Notices and attributions required by libraries that the project depends on.
+README.txt/ |Project's readme.
 
 In our case, our project has the next structure:
 	
