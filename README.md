@@ -1,4 +1,8 @@
 # Web Engineering 2016-2017 / Lab1 Git Race
+[![Quality Gate](https://sonarqube.com/api/badges/gate?key=lab1-git-race)](https://sonarqube.com/dashboard/index/lab1-git-race) 
+
+**Important**: If your pull request turns the quality badge to red after merging, the pull request will be reverted.
+
 
 Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/wiki) in order to get the instructions for this assignment.
 
@@ -15,6 +19,7 @@ Jorge Sanz | 680182 | [![Build Status](https://travis-ci.org/sanz1995/lab1-git-r
 Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race) 
 Adrián Martínez Pérez | 576307 | [![Build Status](https://travis-ci.org/Electryk/lab1-git-race.svg)](https://travis-ci.org/Electryk/lab1-git-race) | Use [markdown](https://guides.github.com/features/mastering-markdown/) in [description.md](description.md)
 Pablo Viñuales | 679609 | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race) | Use [markdown](https://guides.github.com/features/mastering-markdown/) in [description.md](description.md)
+Carlos Tolon Martin | 618051 | [![Build Status] (https://travis-ci.org/ctolon22/lab1-git-race.svg)](https://travis-ci.org/ctolon22/lab1-git-race)
 Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race)
 Adrián Martínez Pérez | 576307 | [![Build Status](https://travis-ci.org/Electryk/lab1-git-race.svg)](https://travis-ci.org/Electryk/lab1-git-race)
 Pablo Viñuales | 679609 | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race)
