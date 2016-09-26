@@ -50,11 +50,11 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
 
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
-To build the project is required to download it or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. You just have to follow the wiki of the main repository to configure the tools needed.
+To build the project, first download it or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is an automation system which uses build configuration scripts like build.gradle which is a build configuration script. You just have to follow the wiki of the main repository to configure the tools needed.
 
-After configuring Gradle you can try to compile using the command `gradle check` in the terminal, this will compiles and tests your code. Other command you can use to build the code is `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources. 
+After configuring Gradle you can try to compile using the command `gradle check` in the terminal, this will compile and test your code. Other command you can use to build the code is `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources. 
 
-Other possibilities related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application. 
+Other possibility related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests. After a few seconds, gradle will respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application. 
 
 Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
