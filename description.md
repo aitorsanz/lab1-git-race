@@ -109,19 +109,15 @@ In our case, our project has the next structure:
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 
+##The next instructions will help you to build and run the application:
+
+The first step is to download the project or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: `gradle build` on your terminal. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed. 
+
+Finally, you can run the project with `gradle bootRun`. Now you can verify if the application is running with your browser: go to [localhost:8080](localhost:8080) and you can see it. 
+
+
 # Bibliography
 
-<<<<<<< HEAD
-JUNIT TEST FRAMEWORK:
-	JUnit is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. JUnit Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. JUnit test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: setUp() method, which runs before every test invocation, tearDown() method, which runs after very test method.
-BIBLIOGRAPHY: https://www.tutorialspoint.com/junit/junit_test_framework.html
-
-The next instructions will help you to build and run the application:
-
-The first step is to download the project or clone with git (git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: "gradle build" on your terminal. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed. 
-
-Finally, you can run the project with "gradle bootRun". Now you can verify if the application is running with your browser: go to localhost:8080 and you can see it. 
-=======
 - [Spring framework in wikipedia](https://en.wikipedia.org/wiki/Spring_Framework)
 - [Introduction to the Spring framework](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html)
 - [JUnit Test framework overview](https://www.tutorialspoint.com/junit/junit_test_framework.html)
