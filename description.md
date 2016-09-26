@@ -47,6 +47,12 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
     - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
 
+# HOW TO BUILD THE APPLICATION ON THE LOCAL MACHINE
+
+To build the project is required to download it or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources. 
+
+Other possibilities related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests or `gradle clean`, `gradle jar` and `gradle check` which will be explained in the next section. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application. 
+
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
 It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configuiring Gradle you can try to compile using the command `gradle check` in the terminal. Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
@@ -109,12 +115,6 @@ In our case, our project has the next structure:
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 
-##The next instructions will help you to build and run the application:
-
-The first step is to download the project or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is a build automation system which uses configuration files like build.gradle which is a build configuration script. To build the code you have to use gradle: `gradle build` on your terminal. After a few seconds, gradle respond you with "BUILD SUCCESSFUL" that means the build has completed. 
-
-Finally, you can run the project with `gradle bootRun`. Now you can verify if the application is running with your browser: go to [localhost:8080](localhost:8080) and you can see it. 
-
 
 # Bibliography
 
@@ -125,4 +125,3 @@ Finally, you can run the project with `gradle bootRun`. Now you can verify if th
 - [Travis CI overview](https://en.wikipedia.org/wiki/Travis_CI)
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
->>>>>>> upstream/master
