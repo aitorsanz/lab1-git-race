@@ -47,21 +47,25 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
     - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
 
+
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
-It's easy to run the application on the local machine. You just have to follow the wiki of the main repository to configure the tools needed. After configuiring Gradle you can try to compile using the command `gradle check` in the terminal. Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
+To build the project, first download it or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is an automation system which uses build configuration scripts like build.gradle which is a build configuration script. You just have to follow the wiki of the main repository to configure the tools needed.
 
-## SOME OTHER TASKS OF GRADLE 
+After configuring Gradle you can try to compile using the command `gradle check` in the terminal, this will compile and test your code. Other command you can use to build the code is `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources. 
+
+Other possibility related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests. After a few seconds, gradle will respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application. 
+
+Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
 In addition to the commands said before, there are other interesting commands:
-- **help:** Displays a help message.
-- **war:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
-- **test:** Runs the unit tests.
-- **clean:** Deletes the build directory.
-- **jar:** Assembles a jar archive containing the main classes.
+- **`gradle help`:** Displays a help message.
+- **`gradle war`:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
+- **`gradle test`:** Runs the unit tests.
+- **`gralde clean`:** Deletes the build directory.
+- **`gradle jar`:** Assembles a jar archive containing the main classes.
 
 You can find more tasks if you type the command `gradle tasks` in your terminal.
-
 
 #USE OF MAVEN AS A JAVA PROJECT BUILDING TOOL
 
@@ -109,6 +113,7 @@ In our case, our project has the next structure:
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 
+
 # Bibliography
 
 - [Spring framework in wikipedia](https://en.wikipedia.org/wiki/Spring_Framework)
@@ -118,3 +123,4 @@ As we can see our project follows Mavens directory layout. There are some direct
 - [Travis CI overview](https://en.wikipedia.org/wiki/Travis_CI)
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+- [Gradle's userguide](https://docs.gradle.org/current/userguide/userguide)
