@@ -67,8 +67,6 @@ In addition to the commands said before, there are other interesting commands:
 
 You can find more tasks if you type the command `gradle tasks` in your terminal.
 
-You can find this information with some examples [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html)
-
 #USE OF MAVEN AS A JAVA PROJECT BUILDING TOOL
 
 Maven is a tool used for building and managing Java-based projects. The primary goal of Maven is to allow developers to comprehend the complete state of a development effort in the shortest period of time, Maven helps us:
@@ -125,3 +123,4 @@ As we can see our project follows Mavens directory layout. There are some direct
 - [Travis CI overview](https://en.wikipedia.org/wiki/Travis_CI)
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+- [Gradle's userguide](https://docs.gradle.org/current/userguide/userguide)
