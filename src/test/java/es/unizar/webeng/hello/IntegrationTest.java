@@ -20,6 +20,14 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @DirtiesContext
 public class IntegrationTest {
 
+
+	/**
+	* This class is used to check if the messages that are sent to the server contain
+	* what they are supposed to have. Integration test should be used after Unit test because
+	* it tests software modules (witch are alredy correct) as a group.
+	*/
+
+
 	@Value("${local.server.port}")
 	private int port = 0;
 	
@@ -42,6 +50,15 @@ public class IntegrationTest {
 				.getBody().contains("<title>Hello"));
 	}
 	
+	
+	/**  
+	* Send a GET message to the server with the path 
+	* "/webjars/bootstrap/3.3.5/css/bootstrap.min.css" and check if 
+	* the server response is OK (200). It also checks if the response contains 
+	* the text "body", if that's the case, shows a warning message. If the specified Content-Type header
+	* is not "text/css", show a warning message.
+	*/
+	 
 	@Test
 	public void testCss() throws Exception {
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
