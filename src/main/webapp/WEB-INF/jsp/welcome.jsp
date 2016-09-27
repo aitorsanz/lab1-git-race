@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<title>Hello world</title>
-<link rel="stylesheet" type="text/css"
-	href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
-<body>
-	<script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
-	<kbd>${time}<span class="glyphicon glyphicon-console" ></span>${message}</kbd>
-
-	<br/>
-
-	<!--
-	 	A custom alert obtained from boostrap main webpage: http://getbootstrap.com/components/#alerts
-	 -->
-	<div class="alert alert-success" role="alert">This is your visit number <strong>${count}</strong> to this url.</div>
-
-</body>
-
+	<head>
+		<script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
+		<title>Hello world</title>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Welcome to UNIZAR Web Engineering's test page!</h2>
+			<!-- A Bootstrap panel showing the console with the current time and a message from the server -->
+			<div class="panel panel-default">
+				<div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
+				<div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
+			</div>
+		</div>
+	</body>
 </html>

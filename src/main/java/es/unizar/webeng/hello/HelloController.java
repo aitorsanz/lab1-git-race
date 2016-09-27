@@ -12,9 +12,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class HelloController {
 
 	@Value("${app.message:Hello World}")
-	private String message;
-	
-	private AtomicInteger count = new AtomicInteger(0); //counter used to track the number of visits made to the url "/"
+	private String message;                                     // A simple message to display
+	private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
 	/**
 	 * This method captures a petition when every single other controller method couldn't get a matched url, and
@@ -34,12 +33,14 @@ public class HelloController {
 	 */
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		//Puts in the key "time" a new date.
+		// Puts in the key "time" a new date.
 		model.put("time", new Date());
-		//Puts in the key "message", the value assigned to [message]
+		// Puts in the key "message", the value assigned to [message]
 		model.put("message", message);
-		//A simple counter that will show the amount of times that the client has visited the url "/"
-		model.put("count", count.incrementAndGet());
+		// A simple counter that will store the amount of times the url "/" has been visited.
+		// The counter needs to be incremented atomically as the method is executed whenever a user requests the root
+        // page concurrently
+		model.put("hitCounter", hitCounter.incrementAndGet());
 
 		return "welcome";
 	}
