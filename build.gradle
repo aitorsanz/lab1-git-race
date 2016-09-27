@@ -64,3 +64,10 @@ eclipse {
     }
 }
 
+test {
+	//we want display the following test events
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+    }
+}
+
