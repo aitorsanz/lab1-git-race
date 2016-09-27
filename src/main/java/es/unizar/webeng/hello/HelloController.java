@@ -30,7 +30,7 @@ public class HelloController {
 	 * This method captures a petition made to /home and then returns a sample page containing the current date of the
 	 * person making the petition as well as a message that can be customized /src/resources/application.properties
 	 * @param model a simple map for a correlation between variable names and their corresponding value
-	 * @return sample web page contained in /src/main/webapp/WEB-INF/jsp/wellcome.jsp
+	 * @return sample web page contained in /src/main/webapp/WEB-INF/jsp/welcome.jsp
 	 */
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
@@ -41,6 +41,6 @@ public class HelloController {
 		//A simple counter that will show the amount of times that the client has visited the url "/"
 		model.put("count", count.incrementAndGet());
 
-		return "wellcome";
+		return "welcome";
 	}
 }

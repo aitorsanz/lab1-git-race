@@ -23,7 +23,7 @@ public class HelloControllerUnitTest {
 	private HelloController controller;
 
 	/**
-	 * This test verifies that the String retuned by HelloController.welcome is equals to "wellcome", the map
+	 * This test verifies that the String retuned by HelloController.welcome is equals to "welcome", the map
 	 * contains a key named "message", and the value of that key equals to the value assigned to [message]
 	 *
 	 * @throws Exception
@@ -32,7 +32,7 @@ public class HelloControllerUnitTest {
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();
     	String view = controller.welcome(map);
-    	assertThat(view, is("wellcome"));
+    	assertThat(view, is("welcome"));
     	assertThat(map.containsKey("message"), is(true));
     	assertThat(map.get("message"), is(message));
     }    
