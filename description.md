@@ -59,7 +59,7 @@ In addition to the commands said before, there are other interesting commands:
 - **test:** Runs the unit tests.
 - **clean:** Deletes the build directory.
 - **jar:** Assembles a jar archive containing the main classes.
-- **clean test:** Displays the test results in console.
+- **clean test:** [Displays the test results in console.](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/issues/42)
 
 You can find more tasks if you type the command `gradle tasks` in your terminal.
 
