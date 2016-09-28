@@ -22,7 +22,7 @@
             var ws = new WebSocket("ws://localhost:8080/ws");
             ws.onmessage = function(res) {
                 // Replace the number of online users with the value from the WebSocket
-                var count = JSON.parse(res.data).value;
+                var count = JSON.parse(res.data).numClients;
                 document.getElementById("onlineUsers").innerHTML = count;
             };
         </script>
