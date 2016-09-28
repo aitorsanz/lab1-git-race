@@ -1,5 +1,6 @@
 package es.unizar.webeng.hello;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -17,6 +18,8 @@ import java.util.concurrent.ConcurrentMap;
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
+    private static final Logger logger = Logger.getLogger(CounterHandler.class);    // log4j logger
+
     private ConcurrentMap<String, WebSocketSession> activeSessions = new ConcurrentHashMap<>();
 
     /**
@@ -31,7 +34,7 @@ public class CounterHandler extends TextWebSocketHandler {
                 s.sendMessage(new TextMessage("{\"value\": " + activeSessions.size() + "}"));
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
     }
 
@@ -48,7 +51,7 @@ public class CounterHandler extends TextWebSocketHandler {
                 s.sendMessage(new TextMessage("{\"value\": " + activeSessions.size() + "}"));
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
     }
 }
