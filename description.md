@@ -85,19 +85,11 @@ es.unizar.webeng.hello.IntegrationTest > testHome PASSED
 ```
 
 In addition to the commands said before, there are other interesting commands:
-<<<<<<< HEAD
-- **help:** Displays a help message.
-- **war:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
-- **test:** Runs the unit tests.
-- **clean:** Deletes the build directory.
-- **jar:** Assembles a jar archive containing the main classes.
-=======
 - **`gradle help`:** Displays a help message.
 - **`gradle war`:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
 - **`gradle test`:** Runs the unit tests.
 - **`gralde clean`:** Deletes the build directory.
 - **`gradle jar`:** Assembles a jar archive containing the main classes.
->>>>>>> upstream/master
 
 You can find more tasks if you type the command `gradle tasks` in your terminal.
 
