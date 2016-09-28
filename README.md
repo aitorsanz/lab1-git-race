@@ -24,9 +24,6 @@ Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/l
 Adrián Martínez Pérez | 576307 | [![Build Status](https://travis-ci.org/Electryk/lab1-git-race.svg)](https://travis-ci.org/Electryk/lab1-git-race)
 Pablo Viñuales | 679609 | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race)
 Alberto Martinez Menendez | 681061 | [![Build Status](https://travis-ci.org/Belberus/lab1-git-race.svg)](https://travis-ci.org/Belberus/lab1-git-race)
-<<<<<<< HEAD
 Daniel Rueda Macías | 559207 | [![Build Status](https://travis-ci.org/danirueda/lab1-git-race.svg)](https://travis-ci.org/danirueda/lab1-git-race)
-=======
 Jose Angel Caudevilla Casaus | 649003 | [![Build Status](https://travis-ci.org/josnick/lab1-git-race.svg)](https://travis-ci.org/josnick/lab1-git-race)
->>>>>>> upstream/master
 your name | your nia | your Travis-ci status
