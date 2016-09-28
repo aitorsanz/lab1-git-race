@@ -58,7 +58,7 @@ Other possibility related to `gradle build` are `gradle assemble` that compiles 
 
 Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
-It can do a testLoggin in the console. This resolves issue #42.
+It can do a testLoggin in the console. This resolves issue #[42](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/issues/42).
 ```
 :processResources
 :classes
