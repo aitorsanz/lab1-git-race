@@ -58,6 +58,32 @@ Other possibility related to `gradle build` are `gradle assemble` that compiles 
 
 Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
+It can do a testLoggin in the console. This resolves issue #[42](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/issues/42).
+```
+:processResources
+:classes
+:compileTestJava
+:processTestResources UP-TO-DATE
+:testClasses
+:test
+
+es.unizar.webeng.hello.HelloControllerUnitTest > testMessage STARTED
+
+es.unizar.webeng.hello.HelloControllerUnitTest > testMessage PASSED
+
+es.unizar.webeng.hello.StaticContentUnitTest > testMessage STARTED
+
+es.unizar.webeng.hello.StaticContentUnitTest > testMessage PASSED
+
+es.unizar.webeng.hello.IntegrationTest > testCss STARTED
+
+es.unizar.webeng.hello.IntegrationTest > testCss PASSED
+
+es.unizar.webeng.hello.IntegrationTest > testHome STARTED
+
+es.unizar.webeng.hello.IntegrationTest > testHome PASSED
+```
+
 In addition to the commands said before, there are other interesting commands:
 - **`gradle help`:** Displays a help message.
 - **`gradle war`:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
