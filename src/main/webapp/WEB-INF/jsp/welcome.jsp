@@ -4,15 +4,6 @@
     <head>
         <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
         <script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
-        <script type="text/javascript">
-            // Connect to the WebSocket
-            var ws = new WebSocket("ws://localhost:8080/ws");
-            ws.onmessage = function(res) {
-                // Replace the number of online users with the value from the WebSocket
-                var count = JSON.parse(res.data).value;
-                document.getElementById("onlineUsers").innerHTML = count;
-            };
-        </script>
         <title>Hello world</title>
     </head>
     <body>
@@ -25,5 +16,15 @@
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
             </div>
         </div>
+        <!-- Script to update the number of online users -->
+        <script type="text/javascript">
+            // Connect to the WebSocket
+            var ws = new WebSocket("ws://localhost:8080/ws");
+            ws.onmessage = function(res) {
+                // Replace the number of online users with the value from the WebSocket
+                var count = JSON.parse(res.data).value;
+                document.getElementById("onlineUsers").innerHTML = count;
+            };
+        </script>
     </body>
 </html>
