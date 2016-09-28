@@ -35,11 +35,17 @@ repositories {
 
 configurations {
     providedRuntime
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
 }
 
 dependencies {
+
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'javax.servlet:jstl'
+
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
 
     compile 'org.springframework.boot:spring-boot-starter-websocket'
 
