@@ -27,12 +27,13 @@ public class HelloController {
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     /**
-     * This method captures a petition when every single other controller method couldn't get a matched url, and
-     * returns a custom 404 page.
-     * @return custom 404 page found in /src/main/webapp/WEB-INF/jsp/404.jsp
+     * <p>This method captures a petition when every single other controller method couldn't get a matched url, and
+     * returns a custom 404 page.</p>
+     * <p>Note: The headers are restricted to not "Upgrade" so that it doesn't respond with HTTP 200 to WebSocket requests
+     * @see <a href="http://stackoverflow.com/questions/38376316/handle-the-same-url-with-spring-mvc-requestmappinghandlermapping-and-spring-webs">
+     *     StackOverflow - Handle the same URL with Spring MVC RequestMappingHandlerMapping and Spring Websocket's ServletWebSocketHandlerRegistry</a></p>
+     * @return A custom 404 page found in /src/main/webapp/WEB-INF/jsp/404.jsp
      */
-    // NOTE: The headers are restricted to not "Upgrade" so that it doesn't respond with HTTP 200 to
-    // WebSocket requests (http://stackoverflow.com/questions/38376316/handle-the-same-url-with-spring-mvc-requestmappinghandlermapping-and-spring-webs)
     @RequestMapping(value = "/*", method = RequestMethod.GET, headers = "Connection!=Upgrade")
     public String notFound() {
         return "404";
