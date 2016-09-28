@@ -34,47 +34,4 @@ public class ClientCounter implements WebSocketConfigurer {
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(counterHandler, "/ws");
     }
-
-    /**
-     * Class that updates a list with the active sessions whenever a new WebSocket connects or disconnects
-     * and broadcasts the number of connected clients to the active ones.
-     */
-    @Component
-    public class CounterHandler extends TextWebSocketHandler {
-
-        private ConcurrentMap<String, WebSocketSession> activeSessions = new ConcurrentHashMap<>();
-
-        /**
-         * Executed after a client establishes a connection with the server.
-         * @param session
-         */
-        @Override
-        public void afterConnectionEstablished(WebSocketSession session) {
-            activeSessions.put(session.getId(), session);
-            try {
-                for (WebSocketSession s : activeSessions.values()) {
-                    s.sendMessage(new TextMessage("{\"value\": " + activeSessions.size() + "}"));
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        /**
-         * Executed after a client closes a connection with the server.
-         * @param session
-         * @param status
-         */
-        @Override
-        public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
-            activeSessions.remove(session.getId());
-            try {
-                for (WebSocketSession s : activeSessions.values()) {
-                    s.sendMessage(new TextMessage("{\"value\": " + activeSessions.size() + "}"));
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
