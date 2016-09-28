@@ -9,6 +9,7 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,9 +25,14 @@ public class CounterHandler extends TextWebSocketHandler {
 
     private static final Logger logger = Logger.getLogger(CounterHandler.class);    // log4j logger
 
-    private ConcurrentMap<String, WebSocketSession> activeSessions = new ConcurrentHashMap<>();
+    private ConcurrentMap<String, WebSocketSession> activeSessions;
     @Autowired
     private ObjectMapper mapper;
+
+    @PostConstruct
+    private void initialize() {
+        activeSessions = new ConcurrentHashMap<>();
+    }
 
     private void broadcastSessionCount() {
         Map<String, Integer> info = new HashMap<>();
