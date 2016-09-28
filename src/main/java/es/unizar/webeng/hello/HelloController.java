@@ -3,6 +3,7 @@ package es.unizar.webeng.hello;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 import java.util.Map;
@@ -20,7 +21,9 @@ public class HelloController {
 	 * returns a custom 404 page.
 	 * @return custom 404 page found in /src/main/webapp/WEB-INF/jsp/404.jsp
 	 */
-	@RequestMapping(value = "/*")
+	// NOTE: The headers are restricted to not "Upgrade" so that it doesn't respond with HTTP 200 to
+	// WebSocket requests (http://stackoverflow.com/questions/38376316/handle-the-same-url-with-spring-mvc-requestmappinghandlermapping-and-spring-webs)
+	@RequestMapping(value = "/*", method = RequestMethod.GET, headers = "Connection!=Upgrade")
 	public String notFound() {
 		return "404";
 	}
