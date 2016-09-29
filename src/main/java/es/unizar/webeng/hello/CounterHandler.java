@@ -24,9 +24,7 @@ import java.util.concurrent.ConcurrentMap;
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
-
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
+    private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
     private ConcurrentMap<String, WebSocketSession> activeSessions;
     @Autowired
