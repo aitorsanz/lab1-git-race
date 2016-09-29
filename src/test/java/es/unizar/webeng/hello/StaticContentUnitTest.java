@@ -17,14 +17,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(HelloController.class)
+@RunWith(SpringRunner.class) // Tells JUnit to invoke the Spring test wrapper which allows the Web App Context to be loaded. 
+@WebMvcTest(HelloController.class) // Annotation indicating a Spring MVC test over the controller "HelloCOntroller". 
 public class StaticContentUnitTest {
 
 	@Autowired
     private WebApplicationContext wac;
 
-	@Value("${app.message:Hello World}")
+	@Value("${app.message:Hello World}") //Annotation at the field that indicates a default value expression for the affected argument.
 	private String message;	
 
 	private MockMvc mockMvc;
