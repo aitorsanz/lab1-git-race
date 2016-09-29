@@ -24,11 +24,10 @@ import java.util.concurrent.ConcurrentMap;
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
-
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
+    private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
     private ConcurrentMap<String, WebSocketSession> activeSessions;
+
     @Autowired
     private ObjectMapper mapper;
 
@@ -39,6 +38,7 @@ public class CounterHandler extends TextWebSocketHandler {
 
     private void broadcastSessionCount() {
         Map<String, Integer> info = new HashMap<>();
+
         info.put("numClients", activeSessions.size());
         try {
             for (WebSocketSession s : activeSessions.values()) {

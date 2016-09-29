@@ -9,21 +9,21 @@ import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * This class implemets a server that capture a petition from a client
+ * and if the petition is allright formed server return wellcome.jsp page
+ * (located in main/webapp/WEB-INF/jsp/wellcome.jsp) containing
+ * the date of the petition and the number of visitor to the page.
+ * If the petition is bad matched server return a error page 404.jsp
+ * (located in main/webapp/WEB-INF/jsp/404.jsp).
+ */
 @Controller
 public class HelloController {
 
-    /**
-     * This class implemets a server that capture a petition from a client
-     * and if the petition is allright formed server return wellcome.jsp page
-     * (located in main/webapp/WEB-INF/jsp/wellcome.jsp) containing
-     * the date of the petition and the number of visitor to the page.
-     * If the petition is bad matched server return a error page 404.jsp
-     * (located in main/webapp/WEB-INF/jsp/404.jsp).
-     */
-
-
     @Value("${app.message:Hello World}")
     private String message;                                     // A simple message to display
+
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     /**

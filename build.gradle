@@ -2,19 +2,19 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-            url "http://repo.spring.io/release"
+            url 'http://repo.spring.io/release'
         }
         maven {
-            url "https://plugins.gradle.org/m2/"
+            url 'https://plugins.gradle.org/m2/'
         }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
-        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.1")
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE')
+        classpath('org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.1')
     }
 }
 
-apply plugin: "spring-boot"
+apply plugin: 'spring-boot'
 apply plugin: 'war'
 
 apply plugin: 'eclipse-wtp'
@@ -41,7 +41,6 @@ configurations {
 }
 
 dependencies {
-
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'javax.servlet:jstl'
 
@@ -61,20 +60,20 @@ dependencies {
 
 eclipse {
     classpath {
-         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-		 file {
-             whenMerged { c ->
-                 c.entries.findAll {entry -> entry.kind=='lib' && entry.moduleVersion.name?.startsWith('tomcat-')  }*.exported = false
-	         }
-	     }
+        containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+        containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+        file {
+            whenMerged { c ->
+                c.entries.findAll {entry -> entry.kind=='lib' && entry.moduleVersion.name?.startsWith('tomcat-')  }*.exported = false
+            }
+        }
     }
 }
 
 test {
     //we want display the following test events
     testLogging {
-        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+        events 'PASSED', 'STARTED', 'FAILED', 'SKIPPED'
     }
 }
 
