@@ -30,7 +30,7 @@ The requirements are:
 If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.
 
 #TRAVIS CI
-*Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.	
+*Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 
 #INSTALLING GRADLE ON WINDOWS 7
 1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
@@ -40,7 +40,7 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
     * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
 5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if works.
 6. For build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
-		
+
 **Common errors:**
 - Gradle doesn't find a resource:
     - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
@@ -52,9 +52,9 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
 
 To build the project, first download it or clone with git (`git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race`). Now, you can see the code and this information. This code is built with gradle. Gradle is an automation system which uses build configuration scripts like build.gradle which is a build configuration script. You just have to follow the wiki of the main repository to configure the tools needed.
 
-After configuring Gradle you can try to compile using the command `gradle check` in the terminal, this will compile and test your code. Other command you can use to build the code is `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources. 
+After configuring Gradle you can try to compile using the command `gradle check` in the terminal, this will compile and test your code. Other command you can use to build the code is `gradle build` on your terminal. Gradle will compile and check your code and create a JAR file containing your main classes and resources.
 
-Other possibility related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests. After a few seconds, gradle will respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application. 
+Other possibility related to `gradle build` are `gradle assemble` that compiles and jars your code, but does not run the unit tests. After a few seconds, gradle will respond you with "BUILD SUCCESSFUL" that means the build has completed and you are able to run the application.
 
 Once this is done, you can start the application using the command `gradle bootrun`. If everything goes fine, the application will have been compiled and started Spring Framework with the application. Now, you can access from your favourite browser by typing in the address bar: *localhost:8080*.
 
@@ -109,7 +109,7 @@ Having a common directory layout help users familiar with one Maven project to n
 Path | Description
 -----|------------
 src/main/java/ | Application/Library sources.
-src/main/resources/ | Application/Library resources. 
+src/main/resources/ | Application/Library resources.
 src/main/webapp/ | Web application sources.
 src/test/java/ | Test sources.
 src/test/resources/ | Test resources.
@@ -118,27 +118,26 @@ NOTICE.txt | Notices and attributions required by libraries that the project dep
 README.txt | Project's readme.
 
 In our case, our project has the next structure:
-	
-	|src/
-	|---main/
-	|------java/
-	|---------es/unizar/webeng/hello/
-	|------resources/
-	|------webapp/
-	|---------WEB-INF/
-	|------------jsp/
-	|------------web.xml
-	|---test/
-	|------java/
-	|---------es/unizar/webeng/hello/
-	|README.md
-	|description.md
-	|build/
-	|gradle/
-	|other files
+
+    |src/
+    |---main/
+    |------java/
+    |---------es/unizar/webeng/hello/
+    |------resources/
+    |------webapp/
+    |---------WEB-INF/
+    |------------jsp/
+    |------------web.xml
+    |---test/
+    |------java/
+    |---------es/unizar/webeng/hello/
+    |README.md
+    |description.md
+    |build/
+    |gradle/
+    |other files
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
-
 
 # Bibliography
 

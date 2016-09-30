@@ -1,7 +1,8 @@
 package es.unizar.webeng.hello;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
@@ -23,9 +24,10 @@ import java.util.concurrent.ConcurrentMap;
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
-    private static final Logger logger = Logger.getLogger(CounterHandler.class);    // log4j logger
+    private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
     private ConcurrentMap<String, WebSocketSession> activeSessions;
+
     @Autowired
     private ObjectMapper mapper;
 
@@ -36,6 +38,7 @@ public class CounterHandler extends TextWebSocketHandler {
 
     private void broadcastSessionCount() {
         Map<String, Integer> info = new HashMap<>();
+
         info.put("numClients", activeSessions.size());
         try {
             for (WebSocketSession s : activeSessions.values()) {
