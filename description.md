@@ -176,7 +176,7 @@ We can see, that git tells to us which files have a conflict. If we open one of 
 ```
 
 What we have is between the first line and '=======' and, what are between '=======' and the last line is the code
-of the other branch. What we've to do is delete the confict lines and choose which code we want. We must do the same
+of the other branch. What we've to do is delete the confict lines (<<<,===,>>>) and choose which code we want. We must do the same
 for all the conflict files. Finally, we can merge branches without problems.
 
 There are a lot of graphic tools to resolve conflicts, but this is the simply way to do it.
