@@ -143,9 +143,9 @@ As we can see our project follows Mavens directory layout. There are some direct
 The first question that we've to do ourselves is, what is a conflict?
 
 A conflict is the modification of the same line or lines by two or more users. A conflict appears when we try to merge branches.
-It's important to know how many branches we have in our repository. With    git log    we can see the commit's history, with
-    git log --oneline    we get the same result but in a short version. But, with    git log --graph --oneline    we get a graphic
-vision of our commits and branches. Also it exists the command    git show-branch -a    that shows all the repository branches.
+It's important to know how many branches we have in our repository. With `git log` we can see the commit's history, with
+`git log --oneline` we get the same result but in a short version. But, with `git log --graph --oneline` we get a graphic
+vision of our commits and branches. Also it exists the command `git show-branch -a` that shows all the repository branches.
 
 When a conflict happens, the console result is like this
 
