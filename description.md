@@ -139,6 +139,50 @@ In our case, our project has the next structure:
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 
+#HOW TO RESOLVE CONFLICTS IN GIT
+The first question that we've to do ourselves is, what is a conflict?
+
+A conflict is the modification of the same line or lines by two or more users. A conflict appears when we try to merge branches.
+It's important to know how many branches we have in our repository. With    git log    we can see the commit's history, with
+    git log --oneline    we get the same result but in a short version. But, with    git log --graph --oneline    we get a graphic
+vision of our commits and branches. Also it exists the command    git show-branch -a    that shows all the repository branches.
+
+When a conflict happens, the console result is like this
+
+```
+
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 3), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+De github.com:oslugr/curso-git
+   afee5ab..bf454ef  master     -> origin/master
+Auto-merging texto/mas-usos.md
+CONFLIC(contenido): merge conflict/mas-usos.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+```
+
+We can see, that git tells to us which files have a conflict. If we open one of them, there will be something like this
+
+```
+
+<<<<<<< HEAD
+    ## Resolving git conflicts
+    =======
+    ## Let's see how we can reolve git conflicts.
+    >>>>>>> bf454eff1b2ea242ea0570389bc75c1ade6b7fa0
+
+```
+
+What we have is between the first line and '=======' and, what are between '=======' and the last line is the code
+of the other branch. What we've to do is delete the confict lines and choose which code we want. We must do the same
+for all the conflict files. Finally, we can merge branches without problems.
+
+There are a lot of graphic tools to resolve conflicts, but this is the simply way to do it.
+
+
+
 # Bibliography
 
 - [Spring framework in wikipedia](https://en.wikipedia.org/wiki/Spring_Framework)
@@ -149,3 +193,4 @@ As we can see our project follows Mavens directory layout. There are some direct
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 - [Gradle's userguide](https://docs.gradle.org/current/userguide/userguide)
+- [Curso de git](https://github.com/danirueda/curso-git)
