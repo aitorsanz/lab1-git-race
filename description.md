@@ -181,6 +181,8 @@ for all the conflict files. Finally, we can merge branches without problems.
 
 There are a lot of graphic tools to resolve conflicts, but this is the simply way to do it.
 
+This part resolves issue #45.
+
 
 
 # Bibliography
