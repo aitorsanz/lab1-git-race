@@ -29,6 +29,28 @@ The requirements are:
 - Heroku the CLI
 If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.
 
+#Deploying the project to Heroku
+
+##Previous steps
+Before trying to deploy your web page to Heroku you should be aware of a couple of things. First of all, there's something called a "Procfile" that is totally optional, but in our case needs to exist in order to correctly deploy the web page. If this file is missing, Heroku treats as if the file had the default config, which is basically the same as creating a Procfile with the following content: `java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar`
+
+For aditional info, the Procfile is best described as: 
+> A Procfile is a text file in the root directory of your application, that defines process types and explicitly declares what command should be executed to start your app.
+
+So basically it's a file that must be created in the root of your web project (in this case lab1-git-race), which content should be a series of commands to run your webapp. In our specific case, we'll create a Procfile with the following content: `web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/ingweb.war`
+
+This tells Heroku to run the .war found in build/libs as the web app. Just in case you're wondering, the name of the .war file comes from the build.gradle war property, which name has been defined as "ingweb"
+
+##Actual deployment
+1. First of all create a free account on [Heroku](https://signup.heroku.com/login). Here you might want to choose Java as your primary language, although I doubt that this has any implications at all.
+2. After having created your account head to your [Dashboard](https://dashboard.heroku.com/apps). Here all your web applications will be displayed. Click on the "New" dropdown and select "Create new app". You can leave the name in blank and it will auto-generate a new one for you. Select "Europe" in this case for the server deployment.
+3. Now you'll probably be at your app dashboard. Head to the "deployment" tab if you aren't in there already. In the "deployment method" section sync your Github account. You'll be prompted to search for the repo-name of the repo you're trying to sync with Heroku. For the purpose of this example search and select "lab1-git-race". Click the "connect" button.
+4. When you've successfully connected to the repository you want to deploy you'll see that two new sections have appeared: "Automatic deploys" and "Manual deploy". For automatic deploys let's continue on 5i and for manual deploys on 5ii.
+5.  1. Automatic deploys are pretty straight-forward, you just select the branch of the repository you want to sync and you can optionally select the option to "Wait for CI to pass before deploy", which in this case we'll select since we have to integrate Travis CI for this assignment anyways. Finally click on "Enable Automatic Deploys". You should be good to go.
+    1. Manual deploys are a bit of a pain in the ass in the sense that you have to manually click on "Deploy branch" every time you want to deploy the changes made to your repository. Try it, select the branch from the dropdown and click on "Deploy branch". If everything went well you should see three green check marks.
+6. Whether you have manually or automatically deployed your web server, you should be able to access it now. Head to the top of your app dashboard and click on the button labeled "Open app" in the top right corner. A new tab in your web browser should open with your new web page.
+7. If something went wrong with the deployment of the app, or you can't access it in spite of it being deployed, head to your app logs and check for any errors on the console. To do this head once again to your app dashboard and at the top click on the "More" dropbdown and select "View logs". You'll be taken to a page with a console output. Check for any errors that might give you a hint to were your problem is.
+
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 

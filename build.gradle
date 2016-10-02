@@ -16,6 +16,7 @@ buildscript {
 
 apply plugin: 'spring-boot'
 apply plugin: 'war'
+apply plugin: 'java'
 
 apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
@@ -26,6 +27,11 @@ jar {
     baseName = 'hello'
     version = '1.0'
 }
+
+war {
+    baseName = 'ingweb'
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
