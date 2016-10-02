@@ -32,12 +32,15 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.	
 
-#INSTALLING GRADLE ON WINDOWS 7
-1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
+#INSTALLING GRADLE ON WINDOWS 7 or Higher(WINDOWS 10)
+1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.(For version 3.1 of Gradle version 1.8.0.102 Java Recommends)
 2. You can now download Gradle binary only distribution [here](https://gradle.org/gradle-download/) and unpack it into a folder on your system.
-3. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
-4. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
+3a. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
+3b. You can also search in the search start main "Environment Variables".
+4a. Check to have the variable "JAVA_HOME" created, but this created, create it with the directory path of the recommended version of java.
+4b. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
     * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
+    * You can avoid creating the GRADLE_HOME or JAVA_HOME variables, insert the full path in the "Path" variable.
 5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if works.
 6. For build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
 		
@@ -46,6 +49,8 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
     - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
     - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
+    - If the variables are created, check that the variables named above have the updated path of the latest version, else set the path updated.
+    - You can put just type in the full path of java and Gradle in the variable "Path"
 
 
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
