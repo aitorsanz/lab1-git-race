@@ -24,4 +24,5 @@ Alberto Martinez Menendez | 681061 | [![Build Status](https://travis-ci.org/Belb
 Daniel Rueda Macías | 559207 | [![Build Status](https://travis-ci.org/danirueda/lab1-git-race.svg)](https://travis-ci.org/danirueda/lab1-git-race)
 Jose Angel Caudevilla Casaus | 649003 | [![Build Status](https://travis-ci.org/josnick/lab1-git-race.svg)](https://travis-ci.org/josnick/lab1-git-race)
 Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/lab1-git-race.svg)](https://travis-ci.org/dbarelop/lab1-git-race)
+Marta Frías Zapater | 535621 | [![Build Status](https://travis-ci.org/martafr/lab1-git-race.svg)](https://travis-ci.org/martafr/lab1-git-race)
 your name | your nia | your Travis-ci status
