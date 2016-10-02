@@ -10,9 +10,12 @@ insert_final_newline = true
 # Set default charset every file
 charset = utf-8
 
-# 4 space indentation every file
+# Space indentation
 indent_style = space
 indent_size = 4
+
+[*.{xml,html,css}]
+indent_size = 2
 
 # Remove any whitespace characters preceding newline characters
 trim_trailing_whitespace = true
