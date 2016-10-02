@@ -24,5 +24,5 @@ Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/l
 Adrián Martínez Pérez | 576307 | [![Build Status](https://travis-ci.org/Electryk/lab1-git-race.svg)](https://travis-ci.org/Electryk/lab1-git-race)
 Pablo Viñuales | 679609 | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race)
 Alberto Martinez Menendez | 681061 | [![Build Status](https://travis-ci.org/Belberus/lab1-git-race.svg)](https://travis-ci.org/Belberus/lab1-git-race)
-Santiago Peralta Martinez | 647973 | [![Build Status](https://travis-ci.org/SantiagoPeralta/lab1-git-race.svg)](https://travis-ci.org/SantiagoPeralta/lab1-git-race)
+Santiago Peralta Martinez | 647973 | [![Build Status](https://travis-ci.org/SantiagoPeralta/lab1-git-race.svg)](https://travis-ci.org/SantiagoPeralta/lab1-git-race) 
 your name | your nia | your Travis-ci status
