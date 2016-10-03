@@ -31,7 +31,7 @@ public class StaticContentUnitTest {
 
 	/**
 	 * The @Before label indicates that this method 
-	 * should be executed before running any tests
+	 * will be executed before running any tests
 	 */
     @Before
     public void setup() {
