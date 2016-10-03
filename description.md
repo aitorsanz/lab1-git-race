@@ -54,7 +54,7 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 
-#INSTALLING GRADLE ON WINDOWS 7 or Higher(WINDOWS 10)
+#INSTALLING GRADLE ON WINDOWS 7 or Higher
 1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.(For version 3.1 of Gradle version 1.8.0.102 Java Recommends)
 2. You can now download Gradle binary only distribution [here](https://gradle.org/gradle-download/) and unpack it into a folder on your system.
 3a. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
@@ -71,7 +71,7 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
     - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
     - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
-    - If the variables are created, check that the variables named above have the updated path of the latest version, else set the path updated.
+    - If the variables are created, check that the variables named above have the updated path of the latest version, else update the path.
     - You can put just type in the full path of java and Gradle in the variable "Path"
 
 
