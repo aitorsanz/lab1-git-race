@@ -62,7 +62,6 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 4a. Check to have the variable "JAVA_HOME" created, but this created, create it with the directory path of the recommended version of java.
 4b. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
     * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
-    * You can avoid creating the GRADLE_HOME or JAVA_HOME variables, insert the full path in the "Path" variable.
 5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if works.
 6. For build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
 
@@ -71,9 +70,6 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
     - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
     - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
-    - If the variables are created, check that the variables named above have the updated path of the latest version, else update the path.
-    - You can put just type in the full path of java and Gradle in the variable "Path"
-
 
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
