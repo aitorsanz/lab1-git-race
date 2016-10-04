@@ -289,10 +289,10 @@ We can see, that git tells to us which files have a conflict. If we open one of 
 
 ```
 <<<<<<<HEAD
-    ## Resolving git conflicts
-    =======
-    ## Let's see how we can reolve git conflicts.
-    >>>>>>> bf454eff1b2ea242ea0570389bc75c1ade6b7fa0
+## Resolving git conflicts
+=======
+## Let's see how we can reolve git conflicts.
+>>>>>>> bf454eff1b2ea242ea0570389bc75c1ade6b7fa0
 ```
 
 What we have between the first line and `=======` and, what are between `=======` and the last line is the code
