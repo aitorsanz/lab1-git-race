@@ -21,40 +21,39 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(HelloController.class)
 public class StaticContentUnitTest {
 
-	@Autowired
+    @Autowired
     private WebApplicationContext wac;
 
-	@Value("${app.message:Hello World}")
-	private String message;	
+    @Value("${app.message:Hello World}")
+    private String message;
 
-	private MockMvc mockMvc;
+    private MockMvc mockMvc;
 
-	/**
-	 * The @Before label indicates that this method 
-	 * should be executed before running any tests
-	 */
+    /**
+     * The @Before label indicates that this method
+     * should be executed before running any tests
+     */
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
     }
 
-    
     /**
-     * The following method is an integrated test that checks 
+     * The following method is an integrated test that checks
      * if the messages are correct.
-     * 
-     * When this method is executed it checks that the value of 
-     * message is "message" and that the request has returned 
-     * something valid, after having made a petition to "/" 
+     *
+     * When this method is executed it checks that the value of
+     * message is "message" and that the request has returned
+     * something valid, after having made a petition to "/"
      * and having printed ()
-     * 
+     *
      * @throws Exception
      */
     @Test
     public void testMessage() throws Exception {
         this.mockMvc.perform(get("/"))
-        	.andDo(print())
+            .andDo(print())
             .andExpect(status().isOk())
             .andExpect(model().attribute("message", is(message)));
-    }    
+    }
 }
