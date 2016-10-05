@@ -1,4 +1,4 @@
-# DESCRIPTION ABOUT TECHNOLOGY USED.
+# DESCRIPTION ABOUT TECHNOLOGY USED
 
 In this classes, faculty provides us some classes which try to show us a little demonstration of Spring controllers and some Junit Test for individual method petitions.
 
