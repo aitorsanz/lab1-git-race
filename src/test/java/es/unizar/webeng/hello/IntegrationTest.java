@@ -17,8 +17,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 /**
  * This class is used to check if the messages that are sent to the server
- * contain what they are supposed to have. Integration test should be used
- * after Unit test because it tests software modules (witch are alredy
+ * contain what they are supposed to contain. Integration test should be used
+ * after Unit test because it tests software modules (which are already
  * correct) as a group.
  */
 @RunWith(SpringRunner.class)
@@ -35,9 +35,8 @@ public class IntegrationTest {
      * This method will throw an exception if the connection fails or if the
      * body of the page is not correct.
      *
-     * @throws Exception
-     *             if the connection failed or if the body of the page is not
-     *             correct
+     * @throws Exception if the connection failed or if the body of the page is not
+     * correct
      */
     @Test
     public void testHome() throws Exception {

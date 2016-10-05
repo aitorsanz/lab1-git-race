@@ -13,17 +13,16 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * This class is used to check if the message received from a client is
- * correct. Integration test should be used after Unit test because
- * it tests software modules (witch are alredy correct) as a group.
+ * 
  */
  /**
-  * JUnit will invoke the SpringRunner class to run the tests in that class instead of the runner built into JUnit.
+  * This class is used to check if the message received from a client is
+  * correct. Integration test should be used after Unit test because
+  * it tests software modules (which are already correct) as a group.
+  * {@RunWith} This annotation allows JUnit to invoke the SpringRunner class to run the tests in that class instead of the runner built into JUnit.
+  * {@WebMvcTest} This annotation will disable full auto-configuration and instead apply only configuration relevant to MVC tests.
   */
 @RunWith(SpringRunner.class) 
-/**
- * Using this annotation will disable full auto-configuration and instead apply only configuration relevant to MVC tests.
- */ 
 @WebMvcTest(HelloController.class)	
 public class HelloControllerUnitTest {
 		
@@ -31,17 +30,13 @@ public class HelloControllerUnitTest {
 	* This class is used to check if the messages received from a client are
 	* correct. Integration test should be used after Unit test because
 	* it tests software modules (which are already correct) as a group.
+	* {@Value} This annotation indicates a default value expression ("Hello World") for the app.message argument.
+	* {@Autowired} This annotation allows to auto wire bean on the field.
 	*/
 
-	/**
-	 * Annotation at the field that indicates a default value expression for the affected argument.
-	 */
 	@Value("${app.message:Hello World}") 
 	private String message;	
 
-	/**
-	 * Annotation to auto wire bean on the field.
-	 */
     @Autowired 
     private HelloController controller;
 
