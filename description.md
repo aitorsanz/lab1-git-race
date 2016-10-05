@@ -316,7 +316,7 @@ To use EditorConfig with one of these editors, you will need to install a plugin
  
 The platform offers a visual report on the current projects and enables the user to replay the past so that he can follow the evolution in quality of his code.
 *SonarQube* covers more than twenty programming languages through plugins including Java, C++, C#, Cobol, Python, PHP among others.
-It can also be integrated into an IDE such as Eclipse, IntelliJ or Visual Studio through and extension called [SonarLint](http://www.sonarlint.org/) providing users with immediate feedback on quality issues and bugs injected into their code.
+It can also be integrated into an IDE such as Eclipse, IntelliJ or Visual Studio through an extension called [SonarLint](http://www.sonarlint.org/) providing users with immediate feedback on quality issues and bugs injected into their code.
 
 
 
