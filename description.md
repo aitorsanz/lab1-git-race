@@ -28,6 +28,7 @@ The requirements are:
 - a free Heroku account
 - Heroku the CLI
 If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.  
+
 Visit this [link](https://upload.wikimedia.org/wikipedia/commons/6/63/ArchitectureHeroku.png) to see a diagrammatic view of the working of Heroku Platform.
 
 #Deploying the project to Heroku
