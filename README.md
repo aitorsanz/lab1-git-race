@@ -26,4 +26,5 @@ Daniel Rueda Macías | 559207 | [![Build Status](https://travis-ci.org/danirueda
 Jose Angel Caudevilla Casaus | 649003 | [![Build Status](https://travis-ci.org/josnick/lab1-git-race.svg)](https://travis-ci.org/josnick/lab1-git-race)
 Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/lab1-git-race.svg)](https://travis-ci.org/dbarelop/lab1-git-race)
 Álvaro Juan Ciriaco | 682531 | [![Build Status](https://travis-ci.org/aJuanCiri/lab1-git-race.svg)](https://travis-ci.org/aJuanCiri/lab1-git-race)
+Alejandro Guiu Pérez | 680669 | [![Build Status](https://travis-ci.org/aguiu/lab1-git-race.svg)](https://travis-ci.org/aguiu/lab1-git-race)
 yourname | your nia | your Travis-ci status
