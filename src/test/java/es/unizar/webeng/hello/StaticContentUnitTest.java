@@ -23,8 +23,11 @@ public class StaticContentUnitTest {
 
 	@Autowired
     private WebApplicationContext wac;
+	/**
+	 * Annotation at the field that indicates a default value expression for the affected argument.
+	 */
+	@Value("${app.message:Hello World}") 
 
-	@Value("${app.message:Hello World}") //Annotation at the field that indicates a default value expression for the affected argument.
 	private String message;	
 
 	private MockMvc mockMvc;

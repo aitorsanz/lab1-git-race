@@ -22,7 +22,11 @@ public class HelloControllerUnitTest {
 	* it tests software modules (which are already correct) as a group.
 	*/
 
-	@Value("${app.message:Hello World}") //Annotation at the field that indicates a default value expression for the affected argument.
+	/**
+	 * Annotation at the field that indicates a default value expression for the affected argument.
+	 */
+	@Value("${app.message:Hello World}") 
+
 	private String message;	
 
 	@Autowired //Annotation to auto wire bean on the field.
