@@ -17,8 +17,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class) // Tells JUnit to invoke the Spring test wrapper which allows the Web App Context to be loaded. 
-@WebMvcTest(HelloController.class) // Annotation indicating a Spring MVC test over the controller "HelloCOntroller". 
+/**
+ * Tells JUnit to invoke the Spring test wrapper which allows the Web App Context to be loaded. 
+ */
+@RunWith(SpringRunner.class)  
+/**
+ * Annotation indicating a Spring MVC test over the controller "HelloCOntroller". 
+ */
+@WebMvcTest(HelloController.class) 
 public class StaticContentUnitTest {
 
 	@Autowired
