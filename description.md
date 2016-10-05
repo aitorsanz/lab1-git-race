@@ -49,9 +49,9 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 ##To get started with Travis CI
 
  1. Sign in to Travis CI with your GitHub account, accepting the GitHub access permissions confirmation.
- 2. Once you’re signed in, and we’ve synchronized your repositories from GitHub, go to your profile page and enable Travis CI for the repository you want to build.
- 3. Add a .travis.yml file to your repository to tell Travis CI what to build.
- 4. Add the .travis.yml file to git, commit and push, to trigger a Travis CI build, travis only runs a build on the commits you push AFTER adding the repository to Travis.
+ 2. Once you’re signed in, and Travis has synchronized your repositories from GitHub, go to your profile page and enable Travis CI for the repository you want to build.
+ 3. Add a `.travis.yml` file to your repository to tell Travis CI what to build.
+ 4. Add the `.travis.yml` file to git, commit and push, to trigger a Travis CI build, travis only runs a build on the commits you push AFTER adding the repository to Travis.
  5. Check the build status page to see if your build passes or fails.
 
 #INSTALLING GRADLE ON WINDOWS 7
@@ -160,7 +160,6 @@ In our case, our project has the next structure:
     |other files
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
-
 
 #HOW TO RESOLVE CONFLICTS IN GIT
 
