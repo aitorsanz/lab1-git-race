@@ -54,6 +54,7 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
+
 **To get started with Travis CI:**
 1. Sign in to Travis CI with your GitHub account, accepting the GitHub access permissions confirmation.
 2. Once you’re signed in, and we’ve synchronized your repositories from GitHub, go to your profile page and enable Travis CI for the repository you want to build.
