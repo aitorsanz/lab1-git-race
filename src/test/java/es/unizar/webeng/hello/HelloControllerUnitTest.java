@@ -12,9 +12,6 @@ import java.util.HashMap;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * 
- */
  /**
   * This class is used to check if the message received from a client is
   * correct. Integration test should be used after Unit test because

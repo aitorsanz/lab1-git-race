@@ -28,7 +28,6 @@ public class StaticContentUnitTest {
 	/**
 	 * {@Value} Indicates a default value expression ("Hello World") for the app.message argument.
 	 * {@Before} Indicates that this method will be executed before running any tests
-	 * 
 	 */
 
     @Autowired
