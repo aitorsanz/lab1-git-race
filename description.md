@@ -1,20 +1,9 @@
-# HOW TO UPDATE THE WIKI
-
-Since it's not possible to include the changes in the wiki into a pull request, here is a way to update the wiki, while still keeping tight control:
-
-1. Create a new repository on your github account, for example, called *Edited-wiki*.
-2. Clone the wiki repo that you want to update to your local machine somewhere: `git clone https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race.wiki.git`
-3. Add a new remote to your local directory, for example: `git remote add editWiki https://github.com/YOUR-ACCOUNT-NAME/Edited-wiki`
-4. Make your locally changes and then push them to your github account: `git push editWiki master`
-5. Submit a issue to the official page (https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) requesting to the owner of the repo to review your changes and merge them in. Don't forget to include a link to your own repo and describe what you've changed.
-
-# DESCRIPTION ABOUT TECHNOLOGY USED.
+# DESCRIPTION ABOUT TECHNOLOGY USED
 
 In this classes, faculty provides us some classes which try to show us a little demonstration of Spring controllers and some Junit Test for individual method petitions.
 
 ## SPRING FRAMEWORK:
 *Spring* is a framework for app developing, it's open source for *Java platform*. *Spring* framework its made of some modules which provides a range of services, these modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, Messaging, and Test.
-The languages based on the JVM machines which can use Spring Framework are Java, [Groovy](http://www.groovy-lang.org/), [Kotlin](https://kotlinlang.org/) and [Scala](http://www.scala-lang.org/).
 	See [this diagram](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/images/spring-overview.png) for more information.
 
 ##JUNIT TEST FRAMEWORK:
@@ -29,7 +18,6 @@ The requirements are:
 - a free Heroku account
 - Heroku the CLI
 If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wrapper.jar>` and `<gradle/wrapper/gradle-wrapper.properties>` to your Git repository.
-![diagrammatic view of the working of Heroku Platform](https://upload.wikimedia.org/wikipedia/commons/6/63/ArchitectureHeroku.png)
 
 #Deploying the project to Heroku
 
@@ -55,14 +43,6 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 
 #TRAVIS CI
 *Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
-
-##To get started with Travis CI
-
- 1. Sign in to Travis CI with your GitHub account, accepting the GitHub access permissions confirmation.
- 2. Once you’re signed in, and we’ve synchronized your repositories from GitHub, go to your profile page and enable Travis CI for the repository you want to build.
- 3. Add a .travis.yml file to your repository to tell Travis CI what to build.
- 4. Add the .travis.yml file to git, commit and push, to trigger a Travis CI build, travis only runs a build on the commits you push AFTER adding the repository to Travis.
- 5. Check the build status page to see if your build passes or fails.
 
 #INSTALLING GRADLE ON WINDOWS 7
 1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
@@ -338,5 +318,3 @@ To use EditorConfig with one of these editors, you will need to install a plugin
 - [Gradle's userguide](https://docs.gradle.org/current/userguide/userguide)
 - [Curso de git](https://github.com/danirueda/curso-git)
 - [About EditorConfig](http://editorconfig.org/)
-- [Heroku Diagram](https://en.wikipedia.org/wiki/Heroku)
-- [To get started with Travis CI](https://docs.travis-ci.com/user/getting-started/)
