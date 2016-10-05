@@ -161,6 +161,148 @@ In our case, our project has the next structure:
 
 As we can see our project follows Mavens directory layout. There are some directories in the layout that aren't present in our project structure but this is because our project source doesn't use anything from those directories since they are generated at building time.
 
+
+#HOW TO RESOLVE CONFLICTS IN GIT
+
+A conflict is the modification of the same line or lines by two or more users. A conflict appears when we try to merge branches.
+It's important to know how many branches we have in our repository. With `git log` we can see the commit's history.
+
+```
+commit 1d567a59862beb27a87936c2ab932cffc40a1a9a
+Author: danirueda <danir94@gmail.com>
+Date:   Sat Oct 1 17:46:11 2016 +0200
+
+    Added a short conflict tutorial, reviewing grammar
+
+commit f2699e495a21697b035824aa62bf15090f94da41
+Merge: 5b53b95 e206836
+Author: Francisco J Lopez-Pellicer <fjlopez@unizar.es>
+Date:   Fri Sep 30 13:18:31 2016 +0200
+
+    Merge pull request #51 from UNIZAR-30246-WebEngineering/revert-50-revert-49-master
+    
+    Add log4j2 integration
+
+commit e20683641bb16dfb509e6eaf9ed996d193d68328
+Author: David <david.recuencogadea@gmail.com>
+Date:   Fri Sep 30 00:20:54 2016 +0200
+
+    REMOVE extra line
+```
+
+With `git log --oneline` we get the same result but in a short version.
+
+```
+5e7fbe9 Issue linked
+9b11752 Fixing some markdown sintax errors
+b22984d Added some modifications
+1d567a5 Added a short conflict tutorial, reviewing grammar
+f2699e4 Merge pull request #51 from UNIZAR-30246-WebEngineering/revert-50-revert-49-master
+e206836 REMOVE extra line
+85c30d0 FIX code style issues, static logger
+14524b6 Revert "Revert "Add log4j2 integration""
+5b53b95 Merge pull request #50 from UNIZAR-30246-WebEngineering/revert-49-master
+cca0183 Revert "Add log4j2 integration"
+81de211 Merge pull request #49 from nebur395/master
+83ea1ff Modify loggers
+8a560d2 Add a log4j2 configuration file
+8436a59 Add log4j2 dependencies
+304fb8b Fix failed merge
+f2c18de Merge pull request #43 from danirueda/master
+00f6fc5 Merge pull request #46 from dbarelop/master
+d06394e Added note about notFound method's annotations to JavaDoc
+0899f00 Initialized active sessions map within PostConstruct method
+2a585d1 Improved WebSockets messages broadcast by using DTO and serializing as JSON
+70e775f Added support for logging exceptions
+66a00f7 Moved script to update online users to bottom of <body>
+```
+
+But, with `git log --graph --oneline` we get a graphic vision of our commits and branches.
+
+```
+* 5e7fbe9 Issue linked
+* 9b11752 Fixing some markdown sintax errors
+* b22984d Added some modifications
+* 1d567a5 Added a short conflict tutorial, reviewing grammar
+*   f2699e4 Merge pull request #51 from UNIZAR-30246-WebEngineering/revert-50-revert-49-master
+|\  
+| * e206836 REMOVE extra line
+| * 85c30d0 FIX code style issues, static logger
+| * 14524b6 Revert "Revert "Add log4j2 integration""
+|/  
+*   5b53b95 Merge pull request #50 from UNIZAR-30246-WebEngineering/revert-49-master
+|\  
+| * cca0183 Revert "Add log4j2 integration"
+|/  
+*   81de211 Merge pull request #49 from nebur395/master
+|\  
+| * 83ea1ff Modify loggers
+| * 8a560d2 Add a log4j2 configuration file
+| * 8436a59 Add log4j2 dependencies
+| * 304fb8b Fix failed merge
+|/ 
+```
+
+Also it exists the command `git show-branch -a` that shows all the repository branches.
+
+```
+* [master] Issue linked
+ ! [origin/HEAD] Issue linked
+  ! [origin/bugfix/disable-sonarqube] Deactivate SonarQube step
+   ! [origin/feature/sonarqube-setup] SonarQube badge
+    ! [origin/master] Issue linked
+     ! [upstream/bugfix/disable-sonarqube] Deactivate SonarQube step
+      ! [upstream/feature/sonarqube-setup] SonarQube badge
+       ! [upstream/master] Merge pull request #51 from UNIZAR-30246-WebEngineering/revert-50-revert-49-master
+--------
+*+  +    [master] Issue linked
+*+  +    [master^] Fixing some markdown sintax errors
+*+  +    [master~2] Added some modifications
+*+  +    [master~3] Added a short conflict tutorial, reviewing grammar
+--  -  - [upstream/master] Merge pull request #51 from UNIZAR-30246-WebEngineering/revert-50-revert-49-master
+*+  +  + [upstream/master^2] REMOVE extra line
+*+  +  + [upstream/master^2^] FIX code style issues, static logger
+*+  +  + [upstream/master^2~2] Revert "Revert "Add log4j2 integration""
+--  -  - [upstream/master^] Merge pull request #50 from UNIZAR-30246-WebEngineering/revert-49-master
+*+  +  + [upstream/master^^2] Revert "Add log4j2 integration"
+--  -  - [upstream/master~2] Merge pull request #49 from nebur395/master
+*+  +  + [upstream/master~2^2] Modify loggers
+*+  +  + [upstream/master~2^2^] Add a log4j2 configuration file
+*+  +  + [upstream/master~2^2~2] Add log4j2 dependencies
+```
+
+When a conflict happens, the console result is like this
+
+```
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 3), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+From github.com:oslugr/curso-git
+   afee5ab..bf454ef  master     -> origin/master
+Auto-merging texto/mas-usos.md
+CONFLICT(contenido): merge conflict/mas-usos.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+We can see, that git tells to us which files have a conflict. If we open one of them, there will be something like this
+
+```
+<<<<<<<HEAD
+## Resolving git conflicts
+=======
+## Let's see how we can reolve git conflicts.
+>>>>>>> bf454eff1b2ea242ea0570389bc75c1ade6b7fa0
+```
+
+What we have between the first line and `=======` and, what are between `=======` and the last line is the code
+of the other branch. What we've to do is delete the confict lines (<<<,===,>>>) and choose which code we want. We must do the same
+for all the conflict files. Finally, we can merge branches without problems.
+
+There are a lot of graphic tools to resolve conflicts, but this is the simply way to do it.
+
+This part resolves issue #[45](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/issues/45).
+
 # EditorConfig 
 EditorConfig helps developers maintain consistent coding styles between different editors and IDEs. It is a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
 You need to create a .editorconfig file in which you define the coding style rules. It is similar to the format accepted by gitignore.
@@ -184,4 +326,5 @@ To use EditorConfig with one of these editors, you will need to install a plugin
 - [How to install gradle on windows 7](https://docs.gradle.org/current/userguide/userguide_single.html)
 - [Introduction to the Standard Directory Layout with Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 - [Gradle's userguide](https://docs.gradle.org/current/userguide/userguide)
+- [Curso de git](https://github.com/danirueda/curso-git)
 - [About EditorConfig](http://editorconfig.org/)
