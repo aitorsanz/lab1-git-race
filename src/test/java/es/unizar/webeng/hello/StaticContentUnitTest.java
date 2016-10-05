@@ -17,22 +17,27 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(HelloController.class)
+/**
+ * {@RunWith} Tells JUnit to invoke the Spring test wrapper which allows the Web Application Context to be loaded. 
+ * {@WebMvcTest} Indicates a Spring MVC test over the controller "HelloCOntroller". 
+ */
+@RunWith(SpringRunner.class)  
+@WebMvcTest(HelloController.class) 
 public class StaticContentUnitTest {
+
+	/**
+	 * {@Value} Indicates a default value expression ("Hello World") for the app.message argument.
+	 * {@Before} Indicates that this method will be executed before running any tests
+	 */
 
     @Autowired
     private WebApplicationContext wac;
-
-    @Value("${app.message:Hello World}")
+	
+	@Value("${app.message:Hello World}")
     private String message;
-
+	
     private MockMvc mockMvc;
-
-    /**
-     * The @Before label indicates that this method
-     * should be executed before running any tests
-     */
+    
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
