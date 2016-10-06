@@ -24,7 +24,8 @@ import java.util.concurrent.ConcurrentMap;
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
-    /** System's logger for exception notifying.
+    /**
+     * System's logger for exception notifying.
      */
     private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
