@@ -9,6 +9,7 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab1-git
 User name | NIA | Travis-CI|TODO|Score
 ----------|-----|----------|------------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/lab1-git-race.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/lab1-git-race)
+Catalin Dumitrache | 529361 | [![Build Status](https://travis-ci.org/catalindumitrache76/lab1-git-race.svg)](https://travis-ci.org/your-github-username/lab1-git-race)
 Francisco Menéndez Moya ([Online app](https://damp-waters-79054.herokuapp.com/)) | 540891 | [![Build Status](https://travis-ci.org/fmenemo/lab1-git-race.svg)](https://travis-ci.org/fmenemo/lab1-git-race)
 Ruben Moreno | 680882 | [![Build Status](https://travis-ci.org/nebur395/lab1-git-race.svg)](https://travis-ci.org/nebur395/lab1-git-race)
 Asier Salueña Sediles | 610344 | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race)
@@ -26,6 +27,7 @@ Jose Angel Caudevilla Casaus | 649003 | [![Build Status](https://travis-ci.org/j
 Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/lab1-git-race.svg)](https://travis-ci.org/dbarelop/lab1-git-race)
 <<<<<<< HEAD
 Álvaro Juan Ciriaco | 682531 | [![Build Status](https://travis-ci.org/aJuanCiri/lab1-git-race.svg)](https://travis-ci.org/aJuanCiri/lab1-git-race)
+Alejandro Guiu Pérez | 680669 | [![Build Status](https://travis-ci.org/aguiu/lab1-git-race.svg)](https://travis-ci.org/aguiu/lab1-git-race)
 yourname | your nia | your Travis-ci status
 =======
 Alvaro Barrios Gil | 666179 | [![Build Status](https://travis-ci.org/deerter/lab1-git-race.svg)](https://travis-ci.org/deerter/lab1-git-race)
