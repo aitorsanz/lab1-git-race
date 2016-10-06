@@ -27,4 +27,3 @@ Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/l
 Álvaro Juan Ciriaco | 682531 | [![Build Status](https://travis-ci.org/aJuanCiri/lab1-git-race.svg)](https://travis-ci.org/aJuanCiri/lab1-git-race)
 Alvaro Barrios Gil | 666179 | [![Build Status](https://travis-ci.org/deerter/lab1-git-race.svg)](https://travis-ci.org/deerter/lab1-git-race)
 your name | your nia | your Travis-ci status
->>>>>>> f6c474461e82b8088ad210679641167c9e3390f7
