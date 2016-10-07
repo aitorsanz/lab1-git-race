@@ -3,24 +3,20 @@
     <head>
         <title>Hello world</title>
         <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
-        <link href="offcanvas.css" rel="stylesheet">
         <script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
-      <nav class="navbar navbar-fixed-top navbar-inverse">
+      <nav class="navbar navbar-inverse">
         <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Web Engineering</a>
           </div>
         </div><!-- /.container -->
       </nav><!-- /.navbar -->
-      <br><br><br>
+      
       <div class="container">
-        <div class="row row-offcanvas row-offcanvas-right">
+        <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <p class="pull-right visible-xs">
-              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-            </p>
             <div class="jumbotron">
               <h2><strong>Welcome to UNIZAR Web Engineering's test page!</strong></h2>
               <p><small><em>This page has been made by the web engineering's students.</em></small></p>
@@ -33,10 +29,14 @@
                 <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
             </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Server location: <strong id="location"></strong></div>
+            </div>
           </div>
         </div>
       </div>
-
+     
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
             // Connect to the WebSocket
@@ -47,5 +47,19 @@
                 document.getElementById("onlineUsers").innerHTML = count;
             };
         </script>
+
+        <!-- Script to search the location of the server ip. -->
+        <script>
+          var ip = "http://ip-api.com/json/" + window.location.hostname;
+          $.getJSON(ip , function(data) {
+              if (data.status !== "fail") {
+                document.getElementById("location").innerHTML = data.city;
+              }
+              else {
+                document.getElementById("location").innerHTML = "error " + data.message;
+              }
+          });
+        </script>
+
     </body>
 </html>
