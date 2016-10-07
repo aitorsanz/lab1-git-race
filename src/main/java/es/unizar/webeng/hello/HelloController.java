@@ -56,7 +56,7 @@ public class HelloController {
     public String welcome(Map<String, Object> model) {
     	
         // Puts in the key "time" a new date.
-    	Date time = new Date();
+        Date time = new Date();
         model.put("time", time);
         
         // Puts in the key "message", the value assigned to [message]
@@ -67,44 +67,51 @@ public class HelloController {
         // page concurrently
         model.put("hitCounter", hitCounter.incrementAndGet());    
 
-        // It stores the moment of time in which a user connects to the web server home page
+        // It stores the time in which a user connects to the web server's home page
         saveLastConnections(time);
         
         return "welcome";
     }
     
     /**
-     * This method captures a request made to /last and then returns a sample 
-     * page containing a log with the latest 10 connections that are made to the web server.
-     * @param model a simple map for a correlation between variable names and their corresponding value
-     * @return A sample web page contained in /src/main/webapp/WEB-INF/jsp/lastConnections.jsp
+     * This method captures a request made to /last and then returns a sample
+     * page containing a log which includes the latest 10 connections that has
+     * been made to the web server.
+     * 
+     * @param model a simple map for a correlation between variable names and
+     *            their corresponding value
+     * @return A sample web page contained in
+     *         /src/main/webapp/WEB-INF/jsp/lastConnections.jsp
      */
     @RequestMapping("/last")
     public String lastConnections(Map<String, Object> model) {
-    	       
-        // Puts in the key "logs", the value assigned to the list of the latest 10 connections
-        model.put("connectLogs",connectLogs);
-    	
-    	return "lastConnections";
+
+        // Puts in the key "logs", the value assigned to the list containing the
+        // latest 10 connections
+        model.put("connectLogs", connectLogs);
+
+        return "lastConnections";
     }
-    
+
     /**
-     * Method that store a log of the latest 10 connections to the web server
-     * @param time the moment of the time in which user connects to the web server
+     * Method that stores the latest 10 connections to the web server in the
+     * last connections log
+     * 
+     * @param time the time which a user connects to the web server
      */
-    private void saveLastConnections(Date time){
-    	
-    	// A list that stores the moments of time in which a user connects to 
-    	// the web server.It stores the latest connections first.
-        // Moreover, the number of connections that are stored are limited to 
-    	// the last 10 to prevent denial of service attacks.
+    private void saveLastConnections(Date time) {
+
+        // A list that stores the time in which a user connects to
+        // the web server. It stores the latest connections first.
+        // Moreover, the number of connections that are stored is limited to
+        // the last 10 in order to prevent denial of service attacks.
         synchronized (connectLogs) {
-        	logList.addFirst(time.toString());
-        }   
-        if(hitCounter.get() >= 10){
-        	synchronized (connectLogs) {
-        		logList.removeLast();
+            logList.addFirst(time.toString());
+        }
+        if (hitCounter.get() >= 10) {
+            synchronized (connectLogs) {
+                logList.removeLast();
             }
-        } 
+        }
     }
 }

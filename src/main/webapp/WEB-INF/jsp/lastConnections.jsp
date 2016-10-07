@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h2>Welcome to UNIZAR Web Engineering's log page!</h2>           
-            <!-- A panel showing a log with the latest 10 connections that are made to the web server. The latest connection is shown first -->
+            <!-- Panel showing a log with the latest 10 connections that has been made to the web server. -->
             <div class="panel panel-default">    
                 <div class="panel-heading">Latest 10 connections</div>
                 <div class="panel-body"> 
