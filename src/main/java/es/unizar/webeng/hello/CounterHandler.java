@@ -40,6 +40,7 @@ public class CounterHandler extends TextWebSocketHandler {
         Map<String, Integer> info = new HashMap<>();
 
         info.put("numClients", activeSessions.size());
+
         try {
             for (WebSocketSession s : activeSessions.values()) {
                 s.sendMessage(new TextMessage(mapper.writeValueAsString(info)));
