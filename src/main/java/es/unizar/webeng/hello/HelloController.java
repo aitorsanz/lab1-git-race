@@ -23,7 +23,7 @@ public class HelloController {
 
     @Value("${app.message:Hello World}")
     private String message;                                     // A simple message to display
-
+    private String message2="UNIZAR-30246-WebEngineering/lab1-git-race";
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     /**
@@ -54,6 +54,7 @@ public class HelloController {
         // A simple counter that will store the amount of times the url "/" has been visited.
         // The counter needs to be incremented atomically as the method is executed whenever a user requests the root
         // page concurrently
+        model.put("message2", message2);
         model.put("hitCounter", hitCounter.incrementAndGet());
 
         return "welcome";
