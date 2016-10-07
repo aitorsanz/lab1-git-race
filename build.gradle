@@ -16,13 +16,18 @@ buildscript {
 
 apply plugin: 'spring-boot'
 apply plugin: 'war'
+
+// This will apply the Java plugin to our project, which adds a number of tasks to our project.
 apply plugin: 'java'
 
+// To create the Eclipse-specific descriptor files, like .project, we need to add 
+// the eclipse plugin to our build file
 apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 
 apply plugin: 'org.sonarqube'
 
+// We will specify the version number and name for our jar.
 jar {
     baseName = 'hello'
     version = '1.0'
@@ -32,7 +37,9 @@ war {
     baseName = 'ingweb'
 }
 
+// Java version compatibility to use when compiling Java source.
 sourceCompatibility = 1.8
+// Java version to generate classes for.
 targetCompatibility = 1.8
 
 repositories {
@@ -46,6 +53,9 @@ configurations {
     }
 }
 
+// Usually a project will have some dependencies on external JAR files. 
+// To reference these JAR files in the project, we need to tell Gradle where to find
+// them. In Gradle, artifacts such as JAR files, are located in a repository.
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'javax.servlet:jstl'
