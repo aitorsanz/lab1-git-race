@@ -3,17 +3,17 @@
 In this classes, faculty provides us some classes which try to show us a little demonstration of Spring controllers and some Junit Test for individual method petitions.
 
 ## SPRING FRAMEWORK:
-*Spring* is a framework for app developing, it's open source for *Java platform*. *Spring* framework its made of some modules which provides a range of services, these modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, Messaging, and Test.
+*Spring* is a framework for app developing, it's open source for *Java platform*. *Spring* framework is made of some modules which provides a range of services, these modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, Messaging, and Test.
 The languages based on the JVM machines which can use Spring Framework are Java, [Groovy](http://www.groovy-lang.org/), [Kotlin](https://kotlinlang.org/) and [Scala](http://www.scala-lang.org/).
 	See [this diagram](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/images/spring-overview.png) for more information.
 
 ##JUNIT TEST FRAMEWORK:
-*JUnit* is a Regression Testing Framework used by developers to implement unit testing in Java, and accelerate programming speed and increase the quality of code. *JUnit* Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. *JUnit* test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: *setUp()* method, which runs before every test invocation, *tearDown()* method, which runs after very test method.
+*JUnit* is a Regression Testing Framework used by developers to implement unit testing in Java, accelerate programming speed and increase the quality of code. *JUnit* Framework can be easily integrated with either of the following: Eclipse, Ant, Maven. *JUnit* test framework provides the following important features: Fixtures, Test suites, Test runners, JUnit classes. Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well-known and fixed environment in which tests are run so that results are repeatable. It includes: *setUp()* method, which runs before every test invocation, *tearDown()* method, which runs after very test method.
 
 ##Heroku
-Guidelines about how to deploy the server on a platform like heroku will be given
+Guidelines about how to deploy the server on a platform like heroku will be given.
 Heroku offers a service PaaS (Platform as a Service) where you can now deploy applications developed in Ruby, Node.js, Python, Clojure, Scala and Java, which in this case is the language chosen. In Heroku define an application and the source code of the application along with its dependencies.
-Heroku deployment is done through Git. The first time, the procedure can be somewhat complex, but once everything is set up, the updates are simply making a push to the Heroku repository `<git push heroku master>`. With this code will be updated in the repository Heroku application and automatically restarts with the new version. Heroku also automatically detects which type of application it is rising.
+Heroku deployment is done through Git. The first time, the procedure can be somewhat complex, but once everything is set up, the updates are made by simply making a push to the Heroku repository `<git push heroku master>`. With this code, everything will be updated in the repository of the Heroku application and will automatically restart with the new version. Heroku also automatically detects which type of application it is rising.
 The requirements are:
 - an existing Java app that uses Gradle as a build tool.
 - a free Heroku account
@@ -24,7 +24,7 @@ If you are using gradlew, then you must also add your `<gradle/wrapper/gradle-wr
 #Deploying the project to Heroku
 
 ##Previous steps
-Before trying to deploy your web page to Heroku you should be aware of a couple of things. First of all, there's something called a "Procfile" that is totally optional, but in our case needs to exist in order to correctly deploy the web page. If this file is missing, Heroku treats as if the file had the default config, which is basically the same as creating a Procfile with the following content: `java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar`
+Before trying to deploy your web page to Heroku, you should be aware of a couple of things. First of all, there's something called a "Procfile" that is totally optional, but in our case needs to exist in order to correctly deploy the web page. If this file is missing, Heroku works as if the file had the default config, which is basically the same as creating a Procfile with the following content: `java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar`
 
 For aditional info, the Procfile is best described as: 
 > A Procfile is a text file in the root directory of your application, that defines process types and explicitly declares what command should be executed to start your app.
@@ -44,7 +44,7 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 7. If something went wrong with the deployment of the app, or you can't access it in spite of it being deployed, head to your app logs and check for any errors on the console. To do this head once again to your app dashboard and at the top click on the "More" dropbdown and select "View logs". You'll be taken to a page with a console output. Check for any errors that might give you a hint to were your problem is.
 
 #TRAVIS CI
-*Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is situated on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
+*Travis CI* is distributed continuous integration service, which supports different languages, used to build and test software projects hosted at GitHub. It allows to connect your GitHub repository and check it after each push. Its main advantage is that we could probe our libraries or applications using several configurations without installing them and that is why it uses different runtimes.60 *Travis CI* could be activated for different repositories. Moreover, it is configured by **travis.yml** file, which is located on the root directory of each repository. This file includes information about the language, the building and testing environment and other aspects. *Travis CI* supports these languages: C, C++, C#, Clojure, D, Erlang, F#, Go, Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic.
 
 ##To get started with Travis CI
 
@@ -60,13 +60,13 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
 3. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
 4. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
     * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
-5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if works.
-6. For build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
+5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if it works.
+6. If you want to build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
 
 **Common errors:**
 - Gradle doesn't find a resource:
-    - If this happens, building a project will result in a failure. The most common cause is that Windows system looks an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
-    - Name it *JAVA_HOME*, and refers to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
+    - If this happens, building a project will result in a failure. The most common cause is that Windows system looks for an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
+    - Name it *JAVA_HOME*, and refer it to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
     - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
 
 
@@ -110,7 +110,7 @@ In addition to the commands said before, there are other interesting commands:
 - **`gradle help`:** Displays a help message.
 - **`gradle war`:** Generates a war archive with all the compiled classes, the web-app content and the libraries.
 - **`gradle test`:** Runs the unit tests.
-- **`gralde clean`:** Deletes the build directory.
+- **`gradle clean`:** Deletes the build directory.
 - **`gradle jar`:** Assembles a jar archive containing the main classes.
 
 You can find more tasks if you type the command `gradle tasks` in your terminal.
@@ -122,11 +122,11 @@ Maven is a tool used for building and managing Java-based projects. The primary 
 - Providing a uniform build system.
 - Providing quality project information.
 - Providing guidelines for best practices development.
-- Allowing trasnparent migration to new features.
+- Allowing transparent migration to new features.
 
 ##MAVEN STANDARD DIRECTORY LAYOUT
 
-Having a common directory layout help users familiar with one Maven project to not get lost in another different Maven project. The directory layout created by Maven have the directories exposed right below and you should try to confort your structure to this one as much as possible:
+Having a common directory layout helps users familiar with one Maven project to not get lost in another different Maven project. The directory layout created by Maven has the directories exposed right below and you should try to confort your structure to this one as much as possible:
 
 Path | Description
 -----|------------
@@ -270,7 +270,7 @@ Also it exists the command `git show-branch -a` that shows all the repository br
 *+  +  + [upstream/master~2^2~2] Add log4j2 dependencies
 ```
 
-When a conflict happens, the console result is like this
+When a conflict happens, the console result looks like this
 
 ```
 remote: Counting objects: 7, done.
@@ -284,7 +284,7 @@ CONFLICT(contenido): merge conflict/mas-usos.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-We can see, that git tells to us which files have a conflict. If we open one of them, there will be something like this
+We can see that git shows which files have a conflict. If we open one of them, there will be something like this
 
 ```
 <<<<<<<HEAD
@@ -294,24 +294,38 @@ We can see, that git tells to us which files have a conflict. If we open one of 
 >>>>>>> bf454eff1b2ea242ea0570389bc75c1ade6b7fa0
 ```
 
-What we have between the first line and `=======` and, what are between `=======` and the last line is the code
-of the other branch. What we've to do is delete the confict lines (<<<,===,>>>) and choose which code we want. We must do the same
+What we have between the first line and `=======` and what we have between `=======` and the last line, is the code
+of the other branch. What we've to do is delete the conflict lines (<<<,===,>>>) and choose which code we want. We must do the same
 for all the conflict files. Finally, we can merge branches without problems.
 
-There are a lot of graphic tools to resolve conflicts, but this is the simply way to do it.
+There are a lot of graphic tools to resolve conflicts, but this is the easiest way to do it.
 
 This part resolves issue #[45](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/issues/45).
 
 # EditorConfig 
-EditorConfig helps developers maintain consistent coding styles between different editors and IDEs. It is a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
+*EditorConfig* helps developers maintain consistent coding styles between different editors and IDEs. It is a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
 You need to create a .editorconfig file in which you define the coding style rules. It is similar to the format accepted by gitignore.
 
 ## IDEs supported by EditorConfig
-These editors come bundled with native support for EditorConfig. Everything should just work: [BBEdit](http://www.barebones.com/support/technotes/editorconfig.html), [Builder](https://wiki.gnome.org/Apps/Builder/Features#EditorConfig), [CLion](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [GitHub](https://github.com/RReverser/github-editorconfig#readme), [Gogs](https://gogs.io/), [IntelliJIDEA](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [RubyMine](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [SourceLair](https://www.sourcelair.com/features/editorconfig), [TortoiseGit](https://tortoisegit.org/), [WebStorm](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig).
+These editors come bundled with native support for *EditorConfig*. Everything should just work: [BBEdit](http://www.barebones.com/support/technotes/editorconfig.html), [Builder](https://wiki.gnome.org/Apps/Builder/Features#EditorConfig), [CLion](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [GitHub](https://github.com/RReverser/github-editorconfig#readme), [Gogs](https://gogs.io/), [IntelliJIDEA](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [RubyMine](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig), [SourceLair](https://www.sourcelair.com/features/editorconfig), [TortoiseGit](https://tortoisegit.org/), [WebStorm](https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig).
 
 ## IDEs not supported by EditorConfig file
 
-To use EditorConfig with one of these editors, you will need to install a plugin: [AppCode](https://plugins.jetbrains.com/plugin/7294), [Atom](https://github.com/sindresorhus/atom-editorconfig#readme), [Brackets](https://github.com/kidwm/brackets-editorconfig/), [Coda](https://panic.com/coda/plugins.php#Plugins), [Code::Blocks](https://github.com/editorconfig/editorconfig-codeblocks#readme), [Eclipse](https://github.com/ncjones/editorconfig-eclipse#readme), [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme), [Geany](https://github.com/editorconfig/editorconfig-geany#readme), [Gedit](https://github.com/editorconfig/editorconfig-gedit#readme), [Jedit](https://github.com/editorconfig/editorconfig-jedit#readme), [Komodo](http://komodoide.com/packages/addons/editorconfig/), [NetBeans](https://github.com/welovecoding/editorconfig-netbeans#readme), [NotePadd++](https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme), [PhpStorm](https://plugins.jetbrains.com/plugin/7294), [PyCharm](https://plugins.jetbrains.com/plugin/7294), [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime#readme), [Textadept](https://github.com/editorconfig/editorconfig-textadept#readme), [textmate](https://github.com/Mr0grog/editorconfig-textmate#readme), [Vim](https://github.com/editorconfig/editorconfig-vim#readme), [Visual Studio](https://github.com/editorconfig/editorconfig-visualstudio#readme), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [Xcode](https://github.com/MarcoSero/EditorConfig-Xcode) 
+To use *EditorConfig* with one of these editors, you will need to install a plugin: [AppCode](https://plugins.jetbrains.com/plugin/7294), [Atom](https://github.com/sindresorhus/atom-editorconfig#readme), [Brackets](https://github.com/kidwm/brackets-editorconfig/), [Coda](https://panic.com/coda/plugins.php#Plugins), [Code::Blocks](https://github.com/editorconfig/editorconfig-codeblocks#readme), [Eclipse](https://github.com/ncjones/editorconfig-eclipse#readme), [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme), [Geany](https://github.com/editorconfig/editorconfig-geany#readme), [Gedit](https://github.com/editorconfig/editorconfig-gedit#readme), [Jedit](https://github.com/editorconfig/editorconfig-jedit#readme), [Komodo](http://komodoide.com/packages/addons/editorconfig/), [NetBeans](https://github.com/welovecoding/editorconfig-netbeans#readme), [NotePadd++](https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme), [PhpStorm](https://plugins.jetbrains.com/plugin/7294), [PyCharm](https://plugins.jetbrains.com/plugin/7294), [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime#readme), [Textadept](https://github.com/editorconfig/editorconfig-textadept#readme), [textmate](https://github.com/Mr0grog/editorconfig-textmate#readme), [Vim](https://github.com/editorconfig/editorconfig-vim#readme), [Visual Studio](https://github.com/editorconfig/editorconfig-visualstudio#readme), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [Xcode](https://github.com/MarcoSero/EditorConfig-Xcode) 
+
+#SonarQube
+*SonarQube* is an open source platform that allows us to evaluate source code in order to maintain quality in our code. To do that, *SonarQube* covers the seven axes of code quality which are as follows:
+ - **Architecture and design**
+ - **Comments**
+ - **Coding rules**
+ - **Potential bugs**
+ - **Duplications**
+ - **Unit tests**
+ - **Complexity**
+ 
+The platform offers a visual report on the current projects and enables the user to replay the past so that he can follow the evolution in quality of his code.
+*SonarQube* covers more than twenty programming languages through plugins including Java, C++, C#, Cobol, Python, PHP among others.
+It can also be integrated into an IDE such as Eclipse, IntelliJ or Visual Studio through an extension called [SonarLint](http://www.sonarlint.org/) providing users with immediate feedback on quality issues and bugs injected into their code.
 
 
 
@@ -329,3 +343,4 @@ To use EditorConfig with one of these editors, you will need to install a plugin
 - [About EditorConfig](http://editorconfig.org/)
 - [Heroku Diagram](https://en.wikipedia.org/wiki/Heroku)
 - [To get started with Travis CI](https://docs.travis-ci.com/user/getting-started/)
+- [About SonarQube](http://www.sonarqube.org/)
