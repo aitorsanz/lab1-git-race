@@ -29,4 +29,5 @@ Sergio Martín Segura | 622612 | [![Build Status](https://travis-ci.org/SureSRM/
 Álvaro Juan Ciriaco | 682531 | [![Build Status](https://travis-ci.org/aJuanCiri/lab1-git-race.svg)](https://travis-ci.org/aJuanCiri/lab1-git-race)
 Alejandro Guiu Pérez | 680669 | [![Build Status](https://travis-ci.org/aguiu/lab1-git-race.svg)](https://travis-ci.org/aguiu/lab1-git-race)
 Alvaro Barrios Gil | 666179 | [![Build Status](https://travis-ci.org/deerter/lab1-git-race.svg)](https://travis-ci.org/deerter/lab1-git-race)
+Sergio Martín Segura | 622612 | [![Build Status](https://travis-ci.org/SureSRM/lab1-git-race.svg)](https://travis-ci.org/SureSrm/lab1-git-race) 
 your name | your nia | your Travis-ci status
