@@ -18,8 +18,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * Class that updates a list with the active sessions whenever a new WebSocket connects or disconnects
- * and broadcasts the number of connected clients to the active ones.
+ * Class that updates a list with the active sessions whenever a new WebSocket
+ * connects or disconnects and broadcasts the number of connected clients to
+ * the active ones.
  */
 @Component
 public class CounterHandler extends TextWebSocketHandler {
@@ -29,18 +30,22 @@ public class CounterHandler extends TextWebSocketHandler {
      */
     private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
-    /** Concurrent map that keeps opened WebSocketSessions.
+    /**
+     * Concurrent map that keeps opened WebSocketSessions.
      */
     private ConcurrentMap<String, WebSocketSession> activeSessions;
 
-    /** ObjectMapper that converts HashMap to JSON (used in broadcastSessionCount() ).
+    /**
+     * ObjectMapper that converts HashMap to JSON (used in broadcastSessionCount() ).
+     * It is injected because of the Java tag
+     * <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"> @Autowired</a>
      */
     @Autowired
     private ObjectMapper mapper;
 
     /**
      * This method initializes the class after doing the autowiring because of the
-     * Java tag @PostConstruct.
+     * Java tag <a href="http://docs.oracle.com/javaee/7/api/javax/annotation/PostConstruct.html">@PostConstruct</a>.
      */
     @PostConstruct
     private void initialize() {
@@ -48,7 +53,8 @@ public class CounterHandler extends TextWebSocketHandler {
     }
 
     /**
-     * This method sends a message to each open WebSocket with the number of active sessions.
+     * This method sends a message to each open WebSocket with the number
+     * of active sessions.
      */
     private void broadcastSessionCount() {
         // Creates a map where to put the number of active clients
