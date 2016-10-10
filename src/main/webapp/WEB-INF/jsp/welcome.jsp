@@ -16,17 +16,16 @@
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
             </div>
 
-	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-		<div class="flipper">
-			<div class="front">
-				Visits: <strong>${hitCounter}</strong>
-			</div>
-			<div class="back">
-				  <div><kbd>${message2}</kbd></div>
-			</div>
-		</div>
-	</div>
-
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front">
+                        Visits: <strong>${hitCounter}</strong>
+                    </div>
+                    <div class="back">
+                        <div><kbd>${messageUnizar}</kbd></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Script to update the number of online users -->

@@ -23,7 +23,7 @@ public class HelloController {
 
     @Value("${app.message:Hello World}")
     private String message;                                     // A simple message to display
-    private String message2="UNIZAR-30246-WebEngineering/lab1-git-race";
+    private String messageUnizar = "UNIZAR-30246-WebEngineering/lab1-git-race";
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     /**
