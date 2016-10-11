@@ -18,3 +18,7 @@ gradle-app.setting
 
 # Ignore Eclipse project metadata
 .project
+.settings
+.project
+.classpath
+.DS_Store

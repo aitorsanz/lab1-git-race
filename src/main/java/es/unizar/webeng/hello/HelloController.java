@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -23,7 +25,7 @@ public class HelloController {
 
     @Value("${app.message:Hello World}")
     private String message;                                     // A simple message to display
-
+    private ArrayList<String> usersList = new ArrayList<String>();
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     /**
@@ -54,5 +56,24 @@ public class HelloController {
         model.put("hitCounter", hitCounter.incrementAndGet());
 
         return "welcome";
+    }
+    
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String name(@RequestParam("userName") String name, Map<String, Object> model){
+    	String request="";
+    	if(name.isEmpty()){
+    		request = "welcome";
+    		message = "You need enter something text";
+    		model.put("hitCounter", hitCounter.intValue());
+    	}else{
+    		request = "List";
+    		message = " Last Visitor is  " + name;
+    		usersList.add(name);
+    		model.put("listUsers", usersList);
+    	}
+    	model.put("time", new Date());
+    	model.put("message", message);
+    	
+    	return request;
     }
 }

@@ -11,7 +11,15 @@
             <!-- A Bootstrap panel showing the console with the current time and a message from the server -->
             <div class="panel panel-default">
                 <div class="panel-heading">Number of users online: <strong id="onlineUsers">0</strong></div>
-                <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
+                <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span></kbd></div>
+                <div class="panel-body">${message}</div>
+                <div class="panel-body">
+                <form method="POST" action="http://localhost:8080/">
+	            	<label>Write you name!!</label><br/>
+	            	<input name="userName" type="text"/><br/><br/>
+	            	<input type="submit" value="Enter Name"/>
+	            </form>
+                </div>
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
             </div>
         </div>
