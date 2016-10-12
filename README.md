@@ -9,6 +9,7 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab1-git
 User name | NIA | Travis-CI|TODO|Score
 ----------|-----|----------|------------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/lab1-git-race.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/lab1-git-race)
+John David | 750846 | [![Build Status](https://travis-ci.org/luisemz/lab1-git-race.svg)](https://travis-ci.org/luisemz/lab1-git-race)
 Luis Mosquera | 750849 | [![Build Status](https://travis-ci.org/luisemz/lab1-git-race.svg)](https://travis-ci.org/luisemz/lab1-git-race)
 Catalin Dumitrache | 529361 | [![Build Status](https://travis-ci.org/catalindumitrache76/lab1-git-race.svg)](https://travis-ci.org/your-github-username/lab1-git-race)
 Francisco Menéndez Moya ([Online app](https://damp-waters-79054.herokuapp.com/)) | 540891 | [![Build Status](https://travis-ci.org/fmenemo/lab1-git-race.svg)](https://travis-ci.org/fmenemo/lab1-git-race)
