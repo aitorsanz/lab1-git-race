@@ -1,8 +1,8 @@
-/* Code adapted from https://davidwalsh.name/css-flip*/
+/*Code adapted from https://davidwalsh.name/css-flip*/
 .flip-container {
 	perspective: 1000px;
 }
-/* flip the pane when hovered */
+/*flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
 	transform: rotateY(180deg);
 }
@@ -10,25 +10,25 @@
 	width: 600px;
 	height: 30px;
 }
-/* flip speed goes here */
+/*flip speed goes here */
 .flipper {
 	transition: 1s;
 	transform-style: preserve-3d;
 	position: relative;
 }
-/* hide back of pane during swap */
+/*hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-/* front pane, placed above back */
+/*front pane, placed above back */
 .front {
 	z-index: 2;
 	transform: rotateY(0deg);
 }
-/* back, initially hidden pane */
+/*back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
 }
