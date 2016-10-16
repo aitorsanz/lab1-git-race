@@ -21,8 +21,10 @@
         </div>
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
-            // Connect to the WebSocket
-            var ws = new WebSocket("ws://localhost:8080/ws");
+
+            // Connect to the server WebSocket after getting its location
+            // (adds support for non-local servers)
+            var ws = new WebSocket("ws://" + window.location.host + "/ws");
             ws.onmessage = function(res) {
                 // Replace the number of online users with the value from the WebSocket
                 var count = JSON.parse(res.data).numClients;

@@ -36,6 +36,10 @@ public class CounterHandler extends TextWebSocketHandler {
         activeSessions = new ConcurrentHashMap<>();
     }
 
+    /**
+     * This method sends the number of online users to all the active WebSocket
+     * sessions
+     */
     private void broadcastSessionCount() {
         Map<String, Integer> info = new HashMap<>();
 
