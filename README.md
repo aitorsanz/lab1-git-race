@@ -22,6 +22,7 @@ Carlos Tolon Martin | 618051 | [![Build Status] (https://travis-ci.org/ctolon22/
 Beatriz Perez Cancer | 683546 | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race)
 Pablo Viñuales | 679609 | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race)
 Alberto Martinez Menendez | 681061 | [![Build Status](https://travis-ci.org/Belberus/lab1-git-race.svg)](https://travis-ci.org/Belberus/lab1-git-race)
+Jesús Bintaned Basa | 683326 | [![Build Status](https://travis-ci.org/jebiba95/lab1-git-race.svg)](https://travis-ci.org/jebiba95/lab1-git-race)
 Daniel Rueda Macías | 559207 | [![Build Status](https://travis-ci.org/danirueda/lab1-git-race.svg)](https://travis-ci.org/danirueda/lab1-git-race)
 Jose Angel Caudevilla Casaus | 649003 | [![Build Status](https://travis-ci.org/josnick/lab1-git-race.svg)](https://travis-ci.org/josnick/lab1-git-race)
 Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/lab1-git-race.svg)](https://travis-ci.org/dbarelop/lab1-git-race)
