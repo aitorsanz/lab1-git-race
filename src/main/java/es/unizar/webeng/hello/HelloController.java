@@ -29,7 +29,7 @@ public class HelloController {
 
     @Value("${app.message:Hello World}")
     private String message;                                     // A simple message to display
-
+    private String messageUnizar = "UNIZAR-30246-WebEngineering/lab1-git-race";
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
 
     // A syncronized list which stores the latest 10 connections that are made to the web server
@@ -65,6 +65,7 @@ public class HelloController {
         // A simple counter that will store the amount of times the url "/" has been visited.
         // The counter needs to be incremented atomically as the method is executed whenever a user requests the root
         // page concurrently
+        model.put("messageUnizar", messageUnizar);
         model.put("hitCounter", hitCounter.incrementAndGet());
 
         // It stores the time in which a user connects to the web server's home page

@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <title>Hello world</title>
-        <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/flip.css" />
+        <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" >
         <script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
@@ -43,8 +44,20 @@
             </div>
           </div>
         </div>
-      </div>
-     
+
+
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front">
+                        Visits: <strong>${hitCounter}</strong>
+                    </div>
+                    <div class="back">
+                        <div><kbd>${messageUnizar}</kbd></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
 
