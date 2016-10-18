@@ -29,7 +29,7 @@ NIA    | User name | Repo | Build Status | Score
 650448 | MURILLO MAGDALENA, JAVIER | [repo](https://github.com/javmurillo/lab1-git-race) | [![Build Status](https://travis-ci.org/javmurillo/lab1-git-race.svg)](https://travis-ci.org/javmurillo/lab1-git-race) | :heavy_check_mark:
 453948 | NAVARRO CLARAS, MARIO | :x: | :x: | :x:
 647973 | PERALTA MARTÍNEZ, SANTIAGO | [repo](https://github.com/SantiagoPeralta/lab1-git-race) | [![Build Status](https://travis-ci.org/SantiagoPeralta/lab1-git-race.svg)](https://travis-ci.org/SantiagoPeralta/lab1-git-race) | :interrobang: 
-683546 | PÉREZ CANCER, BEATRIZ | [repo](https://github.com/beapc18/lab1-git-race) | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race) | ::heavy_check_mark:
+683546 | PÉREZ CANCER, BEATRIZ | [repo](https://github.com/beapc18/lab1-git-race) | [![Build Status](https://travis-ci.org/beapc18/lab1-git-race.svg)](https://travis-ci.org/beapc18/lab1-git-race) | :heavy_check_mark:
 686329 | ROIG JIMENEZ, ANA | [repo](https://github.com/anicacortes/lab1-git-race) | [![Build Status](https://travis-ci.org/anicacortes/lab1-git-race.svg)](https://travis-ci.org/anicacortes/lab1-git-race) | :heavy_check_mark:
 559207 | RUEDA MACÍAS, DANIEL | [repo](https://github.com/danirueda/lab1-git-race) | [![Build Status](https://travis-ci.org/danirueda/lab1-git-race.svg)](https://travis-ci.org/danirueda/lab1-git-race) | :heavy_check_mark:
 610344 | SALUEÑA SEDILES, ASIER | [repo](https://github.com/asierhandball/lab1-git-race) | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race) | :heavy_check_mark:
