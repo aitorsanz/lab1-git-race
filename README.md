@@ -33,4 +33,5 @@ Juan Vela García | 643821 | [![Build Status](https://travis-ci.org/juan-vg/lab1
 Santiago Peralta Martinez | 647973 | [![Build Status](https://travis-ci.org/SantiagoPeralta/lab1-git-race.svg)](https://travis-ci.org/SantiagoPeralta/lab1-git-race)
 Eduardo Aguilar Requena | 647002 | [![Build Status] (https://travis-ci.org/McGredu/lab1-git-race.svg)](https://travis-ci.org/McGredu/lab1-git-race)
 John David | 750846 | [![Build Status](https://travis-ci.org/luisemz/lab1-git-race.svg)](https://travis-ci.org/luisemz/lab1-git-race)
+Luis Mosquera | 750849 | [![Build Status](https://travis-ci.org/luisemz/lab1-git-race.svg)](https://travis-ci.org/luisemz/lab1-git-race)
 your name | your nia | your Travis-ci status

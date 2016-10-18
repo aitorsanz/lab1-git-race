@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Date;
 import java.util.Map;
@@ -25,7 +28,10 @@ public class HelloController {
     private String message;                                     // A simple message to display
 
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
-
+     
+    
+    
+    
     /**
      * <p>This method captures a petition when every single other controller method couldn't get a matched url, and
      * returns a custom 404 page.</p>
@@ -44,7 +50,7 @@ public class HelloController {
      */
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
-        // Puts in the key "time" a new date.
+    	// Puts in the key "time" a new date.
         model.put("time", new Date());
         // Puts in the key "message", the value assigned to [message]
         model.put("message", message);
@@ -52,7 +58,22 @@ public class HelloController {
         // The counter needs to be incremented atomically as the method is executed whenever a user requests the root
         // page concurrently
         model.put("hitCounter", hitCounter.incrementAndGet());
-
+        
         return "welcome";
+    }
+    
+    /**
+     * This method respond a request /name petition to change the value of the message.
+     * @param name Variable entered by the user in the form in the file welcome.jsp
+     * @param model Simple map
+     * @return welcome.jsp file.
+     */
+    @RequestMapping(value = "/name", method = RequestMethod.POST)
+    public String name(@RequestParam("userName") String name, Map<String, Object> model){
+    	message=name;
+    	model.put("time", new Date());
+    	model.put("message", message);
+    	model.put("hitCounter", hitCounter.incrementAndGet());
+    	return "welcome";
     }
 }

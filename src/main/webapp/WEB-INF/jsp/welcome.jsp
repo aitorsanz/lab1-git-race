@@ -14,6 +14,11 @@
                 <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
             </div>
+            <form method="Post" action="http://localhost:8080/name">
+            	Write you name!!<br/>
+            	<input name="userName" type="text"/><br/><br/>
+            	<input type="submit" value="Enter Name"/>
+            </form>
         </div>
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
