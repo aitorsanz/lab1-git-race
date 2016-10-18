@@ -27,7 +27,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Number of users online: <strong id="onlineUsers">0</strong></div>
                 <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
-                <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
+                <div class="panel-footer">
+                	<a href="last">
+                		This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!
+                	</a>
+                </div>
             </div>
             <form method="Post" action="http://localhost:8080/name">
             	Write you name!!<br/>
