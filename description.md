@@ -55,7 +55,7 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
  5. Check the build status page to see if your build passes or fails.
 
 #INSTALLING GRADLE ON WINDOWS 7 OR HIGHER
-1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information. It's recommends for version 3.1 of Gradle whit version 1.8.0.102 Java.
+1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
 2. You can now download Gradle binary only distribution [here](https://gradle.org/gradle-download/) and unpack it into a folder on your system.
 3. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
     * You can also look for them typing *Environment Variables* in the search field of the start menu.
