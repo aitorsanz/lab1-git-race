@@ -6,8 +6,23 @@
         <script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
+      <nav class="navbar navbar-inverse">
         <div class="container">
-            <h2>Welcome to UNIZAR Web Engineering's test page!</h2>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Web Engineering</a>
+          </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navbar -->
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="jumbotron">
+              <h2><strong>Welcome to UNIZAR Web Engineering's test page!</strong></h2>
+              <p><small><em>This page has been made by the web engineering's students.</em></small></p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
             <!-- A Bootstrap panel showing the console with the current time and a message from the server -->
             <div class="panel panel-default">
                 <div class="panel-heading">Number of users online: <strong id="onlineUsers">0</strong></div>
@@ -19,7 +34,13 @@
             	<input name="userName" type="text"/><br/><br/>
             	<input type="submit" value="Enter Name"/>
             </form>
+            <div class="panel panel-default">
+                <div class="panel-heading">Server location: <strong id="location"></strong></div>
+            </div>
+          </div>
         </div>
+      </div>
+     
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
 
@@ -32,5 +53,19 @@
                 document.getElementById("onlineUsers").innerHTML = count;
             };
         </script>
+
+        <!-- Script to search the location of the server ip. -->
+        <script>
+          var ip = "http://ip-api.com/json/" + window.location.hostname;
+          $.getJSON(ip , function(data) {
+              if (data.status !== "fail") {
+                document.getElementById("location").innerHTML = data.city;
+              }
+              else {
+                document.getElementById("location").innerHTML = "error " + data.message;
+              }
+          });
+        </script>
+
     </body>
 </html>
