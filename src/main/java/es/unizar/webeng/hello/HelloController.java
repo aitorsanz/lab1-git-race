@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import java.util.Collections;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,10 +31,11 @@ public class HelloController {
     private String message;                                     // A simple message to display
 
     private AtomicInteger hitCounter = new AtomicInteger(0);    // A simple visit counter
-     
-    
-    
-    
+
+    // A syncronized list which stores the latest 10 connections that are made to the web server
+    private LinkedList<String> logList = new LinkedList<String>();
+    private List<String> connectLogs = Collections.synchronizedList(logList);
+
     /**
      * <p>This method captures a petition when every single other controller method couldn't get a matched url, and
      * returns a custom 404 page.</p>
@@ -50,15 +54,22 @@ public class HelloController {
      */
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
-    	// Puts in the key "time" a new date.
-        model.put("time", new Date());
+
+        // Puts in the key "time" a new date.
+        Date time = new Date();
+        model.put("time", time);
+
         // Puts in the key "message", the value assigned to [message]
         model.put("message", message);
+        
         // A simple counter that will store the amount of times the url "/" has been visited.
         // The counter needs to be incremented atomically as the method is executed whenever a user requests the root
         // page concurrently
         model.put("hitCounter", hitCounter.incrementAndGet());
-        
+
+        // It stores the time in which a user connects to the web server's home page
+        saveLastConnections(time);
+
         return "welcome";
     }
     
@@ -69,11 +80,53 @@ public class HelloController {
      * @return welcome.jsp file.
      */
     @RequestMapping(value = "/name", method = RequestMethod.POST)
-    public String name(@RequestParam("userName") String name, Map<String, Object> model){
-    	message=name;
-    	model.put("time", new Date());
-    	model.put("message", message);
-    	model.put("hitCounter", hitCounter.incrementAndGet());
-    	return "welcome";
+    public String name(@RequestParam("userName") String name, Map<String, Object> model) {
+        message = name;
+        model.put("time", new Date());
+        model.put("message", message);
+        model.put("hitCounter", hitCounter.incrementAndGet());
+        return "welcome";
+    }
+
+    /**
+     * This method captures a request made to /last and then returns a sample
+     * page containing a log which includes the latest 10 connections that has
+     * been made to the web server.
+     * 
+     * @param model a simple map for a correlation between variable names and
+     *            their corresponding value
+     * @return A sample web page contained in
+     *         /src/main/webapp/WEB-INF/jsp/lastConnections.jsp
+     */
+    @RequestMapping("/last")
+    public String lastConnections(Map<String, Object> model) {
+
+        // Puts in the key "logs", the value assigned to the list containing the
+        // latest 10 connections
+        model.put("connectLogs", connectLogs);
+
+        return "lastConnections";
+    }
+
+    /**
+     * Method that stores the latest 10 connections to the web server in the
+     * last connections log
+     * 
+     * @param time the time which a user connects to the web server
+     */
+    private void saveLastConnections(Date time) {
+
+        // A list that stores the time in which a user connects to
+        // the web server. It stores the latest connections first.
+        // Moreover, the number of connections that are stored is limited to
+        // the last 10 in order to prevent denial of service attacks.
+        synchronized (connectLogs) {
+            logList.addFirst(time.toString());
+        }
+        if (hitCounter.get() >= 10) {
+            synchronized (connectLogs) {
+                logList.removeLast();
+            }
+        }
     }
 }
