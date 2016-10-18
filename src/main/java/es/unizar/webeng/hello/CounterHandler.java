@@ -18,19 +18,35 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * Class that updates a list with the active sessions whenever a new WebSocket connects or disconnects
- * and broadcasts the number of connected clients to the active ones.
+ * Class that updates a list with the active sessions whenever a new WebSocket
+ * connects or disconnects and broadcasts the number of connected clients to
+ * the active ones.
  */
 @Component
 public class CounterHandler extends TextWebSocketHandler {
 
+    /**
+     * System's logger for exception notifying.
+     */
     private static final Logger logger = LoggerFactory.getLogger(CounterHandler.class);
 
+    /**
+     * Concurrent map that keeps opened WebSocketSessions.
+     */
     private ConcurrentMap<String, WebSocketSession> activeSessions;
 
+    /**
+     * ObjectMapper that converts HashMap to JSON (used in broadcastSessionCount() ).
+     * It is injected because of the Java tag
+     * <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"> @Autowired</a>
+     */
     @Autowired
     private ObjectMapper mapper;
 
+    /**
+     * This method initializes the class after doing the autowiring because of the
+     * Java tag <a href="http://docs.oracle.com/javaee/7/api/javax/annotation/PostConstruct.html">@PostConstruct</a>.
+     */
     @PostConstruct
     private void initialize() {
         activeSessions = new ConcurrentHashMap<>();
@@ -41,6 +57,7 @@ public class CounterHandler extends TextWebSocketHandler {
      * sessions
      */
     private void broadcastSessionCount() {
+        // Creates a map where to put the number of active clients
         Map<String, Integer> info = new HashMap<>();
 
         info.put("numClients", activeSessions.size());
@@ -54,6 +71,8 @@ public class CounterHandler extends TextWebSocketHandler {
     }
 
     /**
+     * This method saves the incoming session to the activeSessions map and
+     * broadcasts the new count to every single active WebSocket.
      * Executed after a client establishes a connection with the server.
      * @param session
      */
@@ -64,6 +83,8 @@ public class CounterHandler extends TextWebSocketHandler {
     }
 
     /**
+     * This method removes the outcoming session from the activeSessions map and
+     * broadcasts the new count to every single active WebSocket.
      * Executed after a client closes a connection with the server.
      * @param session
      * @param status

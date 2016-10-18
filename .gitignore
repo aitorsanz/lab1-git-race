@@ -18,3 +18,8 @@ gradle-app.setting
 
 # Ignore Eclipse project metadata
 .project
+/lab1-git-race.iml
+/lab1-git-race.ipr
+/lab1-git-race.iws
+/.classpath
+/.settings/
