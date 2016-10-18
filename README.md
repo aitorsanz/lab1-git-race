@@ -15,7 +15,7 @@ NIA    | User name | Repo | Build Status | Score
 649003 | CAUDEVILLA CASAUS, JOSE ÁNGEL | [repo](https://github.com/josnick/lab1-git-race) | [![Build Status](https://travis-ci.org/josnick/lab1-git-race.svg)](https://travis-ci.org/josnick/lab1-git-race) | :interrobang: 
 750846 | DAVID MOLINA, JOHN ALEXIS | [repo](https://github.com/luisemz/lab1-git-race) | [![Build Status](https://travis-ci.org/luisemz/lab1-git-race.svg)](https://travis-ci.org/luisemz/lab1-git-race) | :heavy_check_mark:
 529361 | DUMITRACHE , CATALIN  CONSTANTIN | [repo](https://github.com/catalindumitrache76/lab1-git-race) | [![Build Status](https://travis-ci.org/catalindumitrache76/lab1-git-race.svg)](https://travis-ci.org/catalindumitrache76/lab1-git-race) | :heavy_check_mark:
-535621 | FRÍAS ZAPATER, MARTA ALMUDENA | [repo](https://github.com/martafr/lab1-git-race) | [![Build Status](https://travis-ci.org/martafr/lab1-git-race.svg)](https://travis-ci.org/martafr/lab1-git-race) | :+1:
+535621 | FRÍAS ZAPATER, MARTA ALMUDENA | [repo](https://github.com/martafr/lab1-git-race) | [![Build Status](https://travis-ci.org/martafr/lab1-git-race.svg)](https://travis-ci.org/martafr/lab1-git-race) | :heavy_check_mark:
 680258 | GARCIA DE QUIROS GIMENEZ, JORGE | :x: | :x: | :x:
 680669 | GUIU PÉREZ, ALEJANDRO | [repo](https://github.com/aguiu/lab1-git-race) | [![Build Status](https://travis-ci.org/aguiu/lab1-git-race.svg)](https://travis-ci.org/aguiu/lab1-git-race) | :heavy_check_mark:
 682531 | JUAN CIRIACO, ÁLVARO | [repo](https://github.com/aJuanCiri/lab1-git-race) | [![Build Status](https://travis-ci.org/aJuanCiri/lab1-git-race.svg)](https://travis-ci.org/aJuanCiri/lab1-git-race) | :heavy_check_mark:
