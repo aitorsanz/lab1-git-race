@@ -29,4 +29,5 @@ Daniel Barea López | 666156 | [![Build Status](https://travis-ci.org/dbarelop/l
 Alejandro Guiu Pérez | 680669 | [![Build Status](https://travis-ci.org/aguiu/lab1-git-race.svg)](https://travis-ci.org/aguiu/lab1-git-race)
 Alvaro Barrios Gil | 666179 | [![Build Status](https://travis-ci.org/deerter/lab1-git-race.svg)](https://travis-ci.org/deerter/lab1-git-race)
 Juan Vela García | 643821 | [![Build Status](https://travis-ci.org/juan-vg/lab1-git-race.svg)](https://travis-ci.org/juan-vg/lab1-git-race)
+Santiago Peralta Martinez | 647973 | [![Build Status](https://travis-ci.org/SantiagoPeralta/lab1-git-race.svg)](https://travis-ci.org/SantiagoPeralta/lab1-git-race)
 your name | your nia | your Travis-ci status

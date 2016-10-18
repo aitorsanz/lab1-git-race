@@ -54,21 +54,22 @@ This tells Heroku to run the .war found in build/libs as the web app. Just in ca
  4. Add the `.travis.yml` file to git, commit and push, to trigger a Travis CI build, travis only runs a build on the commits you push AFTER adding the repository to Travis.
  5. Check the build status page to see if your build passes or fails.
 
-#INSTALLING GRADLE ON WINDOWS 7
+#INSTALLING GRADLE ON WINDOWS 7 OR HIGHER
 1. Gradle requires a JDK to be installed, version 7 or higher. Visit this [link](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk) to download and more information.
 2. You can now download Gradle binary only distribution [here](https://gradle.org/gradle-download/) and unpack it into a folder on your system.
 3. Now, right click on *My Computer* and then select *Properties"->"Advance system settings*.
-4. Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 2 new user variable, **GRADLE_HOME** and **PATH**.
-    * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the dowloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and *%GRADLE_HOME%\bin*. If **PATH** existed before we created, then we have to edit it. For that, click on *Edit...*, and add *;%GRADLE_HOME%\bin* at the end.
+    * You can also look for them typing *Environment Variables* in the search field of the start menu.
+4. Check to have the variable **JAVA_HOME** created, if not, create it with the directory path of the recommended version of java.
+    * Next, click on *Environment Variables* button, found in *Advanced* tab. Then we want to add 1 new user variable, **GRADLE_HOME**.
+    * To add a new variable, click on *New...* button (from user variables frame). For **GRADLE_HOME** variable enter *GRADLE_HOME* into the input field for *Variable name*, and the location of the downloaded gradle into *Variable value*. For **PATH** variable, enter *PATH* and `%GRADLE_HOME%\bin`. We have to edit it. For that, click on *Edit...*, and add `;%GRADLE_HOME%\bin` at the end.
 5. Now you can use the gradle command in any command prompt. Type `gradle -v` to see if it works.
 6. If you want to build a project, go to the project's root folder and type `gradle build`. This only works if a **build.gradle** file is well created.
 
 **Common errors:**
 - Gradle doesn't find a resource:
     - If this happens, building a project will result in a failure. The most common cause is that Windows system looks for an incorrect folder while searching a Java resource. To fix this, a new user variable must be created (like *GRADLE_HOME* one).
-    - Name it *JAVA_HOME*, and refer it to JDK installation folder (*C:\Program Files\Java\jdk1.8...* is a possible route).
-    - Ultimately, edit the variable *PATH* adding *;%JAVA_HOME%\bin* at the end.
-
+    - Name it *JAVA_HOME*, and refer it to JDK installation folder (`C:\Program Files\Java\jdk1.8...` is a possible route).
+    - Ultimately, edit the variable *PATH* adding `;%JAVA_HOME%\bin` at the end.
 
 # HOW TO RUN THE APPLICATION ON THE LOCAL MACHINE
 
