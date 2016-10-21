@@ -34,7 +34,7 @@ NIA    | User name | Repo | Build Status | Score
 559207 | RUEDA MACÍAS, DANIEL | [repo](https://github.com/danirueda/lab1-git-race) | [![Build Status](https://travis-ci.org/danirueda/lab1-git-race.svg)](https://travis-ci.org/danirueda/lab1-git-race) | :heavy_check_mark:
 610344 | SALUEÑA SEDILES, ASIER | [repo](https://github.com/asierhandball/lab1-git-race) | [![Build Status](https://travis-ci.org/asierhandball/lab1-git-race.svg)](https://travis-ci.org/asierhandball/lab1-git-race) | :heavy_check_mark:
 680182 | SANZ ALCAINE, JORGE | [repo](https://github.com/sanz1995/lab1-git-race) | [![Build Status](https://travis-ci.org/sanz1995/lab1-git-race.svg)](https://travis-ci.org/sanz1995/lab1-git-race) | :heavy_check_mark:
-534521 | SANZ VIDAL, AITOR | :interrobang: | :interrobang: | :interrobang: 
+534521 | SANZ VIDAL, AITOR | [repo](https://github.com/aitorsanz/lab1-git-race) | [![Build Status](https://travis-ci.org/aitorsanz/lab1-git-race.svg)](https://travis-ci.org/aitorsanz/lab1-git-race)| :interrobang: 
 618051 | TOLON MARTÍN, CARLOS JAVIER | [repo](https://github.com/ctolon22/lab1-git-race) | [![Build Status](https://travis-ci.org/ctolon22/lab1-git-race.svg)](https://travis-ci.org/ctolon22/lab1-git-race) | :heavy_check_mark:
 643821 | VELA GARCÍA, JUAN | [repo](https://github.com/juan-vg/lab1-git-race) | [![Build Status](https://travis-ci.org/juan-vg/lab1-git-race.svg)](https://travis-ci.org/juan-vg/lab1-git-race) | :gift:
 679609 | VIÑUALES SÁNCHEZ, PABLO | [repo](https://github.com/strummerTFIU/lab1-git-race) | [![Build Status](https://travis-ci.org/strummerTFIU/lab1-git-race.svg)](https://travis-ci.org/strummerTFIU/lab1-git-race) | :heavy_check_mark:
