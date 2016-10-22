@@ -61,6 +61,7 @@
 
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
+
             // Connect to the server WebSocket after getting its location
             // (adds support for non-local servers)
             var ws = new WebSocket("ws://" + window.location.host + "/ws");
