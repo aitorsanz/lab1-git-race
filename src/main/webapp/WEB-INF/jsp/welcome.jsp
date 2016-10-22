@@ -28,7 +28,6 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Number of users online: <strong id="onlineUsers">0</strong></div>
                 <div class="panel-body"><kbd>${time}<span class="glyphicon glyphicon-console"></span>${message}</kbd></div>
-                <div class="panel-body">La ip de origen es <strong id="my-ip"></strong></div>
                 <div class="panel-footer">This page has been visited <strong>${hitCounter}</strong> time${hitCounter != 1 ? "s" : ""}!</div>
                 <div class="panel-footer">
                 	<a href="last">
@@ -62,11 +61,6 @@
 
         <!-- Script to update the number of online users -->
         <script type="text/javascript">
-            //Function that returns the IP from client
-            function get_ip(obj)
-            {
-                document.getElementById('my-ip').innerHTML = obj.ip;
-            }
             // Connect to the server WebSocket after getting its location
             // (adds support for non-local servers)
             var ws = new WebSocket("ws://" + window.location.host + "/ws");
@@ -76,7 +70,6 @@
                 document.getElementById("onlineUsers").innerHTML = count;
             };
         </script>
-
         <!-- Script to search the location of the server ip. -->
         <script>
           var ip = "http://ip-api.com/json/" + window.location.hostname;
@@ -89,6 +82,14 @@
               }
           });
         </script>
-
+      //Function that returns the IP from client
+      <script>
+          var myip;
+          function ip_callback(o) {
+              myip = o.host;
+          }
+      </script>
+      <script src="https://smart-ip.net/geoip-json?callback=ip_callback"></script>
+      <script>alert(myip);</script>
     </body>
 </html>
